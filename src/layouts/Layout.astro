@@ -5,8 +5,8 @@ export interface Props {
 
 const { title } = Astro.props;
 
-// Global StyleSheet Import
-import '../styles/app.scss';
+// // Global StyleSheet Import
+// import '../styles/app.scss';
 ---
 
 <!DOCTYPE html>
@@ -31,6 +31,12 @@ import '../styles/app.scss';
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <section class="appContainer">
+      <slot />
+    </section>
   </body>
 </html>
+
+<style lang="scss">
+  @import '../styles/app.scss';
+</style>
