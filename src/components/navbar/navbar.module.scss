@@ -1,0 +1,162 @@
+@use '../../styles/variables.scss';
+
+//NavvBar Component
+
+.navBar {
+  background: variables.$background;
+  // overflow: hidden;
+  height: 8vh;
+  position: relative;
+
+  @include variables.size(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navBarCentering {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  @include variables.size(tablet) {
+    padding: 0;
+    padding-left: 2rem;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: variables.$mainLogo;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  order: 1;
+  transition: variables.$shortTransition;
+
+  &_menuActive {
+    color: variables.$activeMainLogo;
+    transition: variables.$shortTransition;
+  }
+
+  @include variables.size(tablet) {
+    font-size: 1.5rem;
+    &:hover {
+      color: variables.$activeMainLogo;
+    }
+  }
+  @include variables.size(laptop) {
+    font-size: 1.7rem;
+  }
+}
+
+.menuIcon {
+  width: 1.5rem;
+  cursor: pointer;
+  transition: variables.$shortTransition;
+
+  &_active {
+    transform: rotate(-90deg);
+    transition: variables.$shortTransition;
+  }
+
+  @include variables.size(tablet) {
+    display: none;
+  }
+}
+
+.menuContainer {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  background: variables.$background;
+  transition: variables.$longTransition;
+  box-shadow: variables.$light-shadow;
+
+  &_active {
+    height: 220px;
+    transition: variables.$longTransition;
+  }
+
+  &Divider {
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  @include variables.size(tablet) {
+    height: auto;
+    position: static;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+
+    &Divider {
+      display: block;
+      font-weight: 200;
+      // margin: 0 1rem;
+    }
+  }
+}
+
+//Links Component
+
+.linkList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include variables.size(tablet) {
+    flex-direction: row;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  @include variables.size(laptop) {
+    gap: 3rem;
+  }
+}
+
+.link {
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  letter-spacing: 1px;
+  transition: variables.$shortTransition;
+  position: relative;
+
+  @include variables.size(tablet) {
+    padding-left: 0rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background-color: variables.$linkHover;
+      transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+  }
+}

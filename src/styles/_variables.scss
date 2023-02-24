@@ -1,0 +1,134 @@
+/*FONT IMPORT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Nunito+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,400&display=swap');
+
+/*VARIABLES*/
+
+/*Elements Colors from https://www.happyhues.co/palettes/4 */
+$background: #242629;
+$backgroundDarker: #16161a; /*Darker Grey*/
+$white: #fffffe; /*Headlines*/
+$whiteDarker: #e6e6e5; /*10% white shade*/
+$greyLight: #cad0d9; /*50% tint from Grey*/
+$grey: #94a1b2; /*Paragraph*/
+$greyDarker: #76818e; /*20% Shade*/
+$green: #2cb67d; /*Highlights or details*/
+$greenDarker: #1f7f58; /*20% shade*/
+$violet: #7f5af0; /*Buttons*/
+$violetDark: #593fa8; /*20% shade*/
+$violetDarkest: #332460; /*60% shade*/
+
+/*NavBar*/
+$mainLogo: $green;
+$activeMainLogo: $violet;
+$linkHover: $violet;
+
+/*Header*/
+$titleHighlight: $green;
+$mailBtn: $green;
+
+/*About*/
+$aboutText: $greyLight;
+$skillSetTitle: $white;
+$skillName: $violet;
+
+/*Projects*/
+$projectMainInfoBack: $backgroundDarker;
+$projectMainInfoTranspBack: rgba(22, 22, 26, 0.6);
+$projectTitle: $violet;
+$projectText: $grey;
+$demoBtnBack: $violet;
+$demoBtnBackHover: $violetDark;
+$codeBtnBack: $grey;
+$codeBtnText: $grey;
+$codeBtnBackHover: $greyDarker;
+$techBackground: $backgroundDarker;
+$techTitle: $grey;
+$techEachBack: $background;
+$techEachText: $white;
+
+/*Contact*/
+$contactText: $greyLight;
+
+/*Footer*/
+$footerText: $greyLight;
+
+/*Shadows*/
+$light-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+$projectShadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.35);
+$projectShadowHover: 0px 0px 30px 3px rgba(127, 90, 240, 0.2);
+
+/*Transitions*/
+$shortTransition: all 0.2s ease-in;
+$mediumTransition: all 0.4s ease-in-out;
+$longTransition: all 0.6s ease-in-out;
+
+////////////////////////////////////////////////////
+///////////////////MIXINS MEDIA QUERIES////////////
+//////////////////////////////////////////////////
+
+@mixin size($size) {
+  @if $size == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: 1366px) {
+      @content;
+    }
+  }
+}
+
+//////////////////////////////////////////
+///////////Section Styles////////////////
+////////////////////////////////////////
+
+@mixin section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@mixin titleContainer {
+  margin-bottom: 2rem;
+  margin-right: auto;
+}
+
+@mixin title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  width: min-content;
+  text-align: right;
+
+  @include size(tablet) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @include size(laptop) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @include size(desktop) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &Highlight {
+    @extend .title;
+    color: $titleHighlight;
+  }
+}

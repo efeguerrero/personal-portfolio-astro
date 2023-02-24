@@ -1,0 +1,102 @@
+@use '../../styles/variables.scss';
+
+.header {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+
+  @include variables.size(tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.logo {
+  display: none;
+
+  @include variables.size(tablet) {
+    translate: (0 -4rem);
+    display: block;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 13rem;
+    color: variables.$violet;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(
+      90deg,
+      variables.$violet 19%,
+      transparent 19%,
+      transparent 21%,
+      variables.$violetDark 21%,
+      variables.$violetDark 45%,
+      transparent 45%,
+      transparent 46%,
+      variables.$violet 46%,
+      variables.$violet 55%,
+      transparent 55%,
+      transparent 57%,
+      variables.$violet 57%,
+      variables.$violet 70%,
+      transparent 70%,
+      transparent 72%,
+      variables.$violetDark 72%,
+      variables.$violetDark 83%,
+      transparent 83%,
+      transparent 88%,
+      variables.$violet 88%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @include variables.size(laptop) {
+    font-size: 15.5rem;
+  }
+
+  @include variables.size(desktop) {
+    font-size: 19rem;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.6rem;
+  letter-spacing: -1.2px;
+  line-height: 2.4rem;
+
+  &Highlight {
+    @extend .title;
+    color: variables.$titleHighlight;
+  }
+  &HighlightViolet {
+    @extend .title;
+    color: variables.$violet;
+  }
+
+  @include variables.size(tablet) {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+
+  @include variables.size(laptop) {
+    font-size: 4.2rem;
+    line-height: 4rem;
+  }
+
+  @include variables.size(desktop) {
+    font-size: 5.8rem;
+    line-height: 5.3rem;
+  }
+}
+
+.socials {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+}

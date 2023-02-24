@@ -1,0 +1,54 @@
+@use '../../styles/variables.scss';
+
+.contact {
+  @include variables.section;
+  margin-bottom: 4rem;
+}
+
+////////////////////////
+/////TITLE STYLING/////
+//////////////////////
+
+.titleContainer {
+  @include variables.titleContainer;
+}
+
+.title {
+  @include variables.title;
+}
+
+///////////////////////
+//////Text Styling////
+/////////////////////
+
+.text {
+  width: 100%;
+  margin: 1rem 0rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  word-break: break-word;
+  text-rendering: optimizeLegibility;
+  color: variables.$contactText;
+  text-align: center;
+
+  @include variables.size(tablet) {
+    width: 70%;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  @include variables.size(laptop) {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+  }
+
+  &Higlight {
+    // background-color: variables.$violet;
+    // padding: 0 0.1rem;
+    color: variables.$violet;
+    font-weight: 600;
+  }
+}
