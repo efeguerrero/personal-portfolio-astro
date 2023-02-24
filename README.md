@@ -1,6 +1,7 @@
 # Francisco Guerrero - Web Developer
 
-My own personal portfolio Website to shocase my profile, skills and work
+My own personal portfolio Website to showcase my profile, skills and work.
+Migrated it from a SPA built on React to a Static Site built with Astro as a way of mastering this framework.
 
 # What did I use?
 
