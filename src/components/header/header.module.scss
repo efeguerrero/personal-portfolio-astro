@@ -1,6 +1,8 @@
 @use '../../styles/variables.scss';
 
 .header {
+  border: 1px solid white;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
