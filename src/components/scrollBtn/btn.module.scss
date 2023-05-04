@@ -1,0 +1,42 @@
+@use '../../styles/variables.scss';
+
+.btn {
+  position: fixed;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  bottom: 2rem;
+  right: 0.7rem;
+  background-color: variables.$violet;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.1s linear;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.btn:hover {
+  background-color: variables.$violetDark;
+}
+
+.arrowIcon {
+  width: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    right: 1rem;
+  }
+
+  .arrowIcon {
+    width: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    right: 1.5rem;
+  }
+}

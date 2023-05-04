@@ -9,9 +9,10 @@
   min-height: 3.5rem;
   position: absolute;
   width: 100%;
+  z-index: 120;
 
   @include variables.size(tablet) {
-    position: relative;
+    // position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

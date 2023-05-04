@@ -6,6 +6,7 @@ import About from '../components/about/About';
 import WorkContainer from '../components/work/WorkContainer';
 import Contact from '../components/contact/Contact';
 import Footer from '../components/footer/Footer';
+import ScrollBtn from '../components/scrollBtn/ScrollBtn';
 ---
 
 <Layout title="Francisco Guerrero | Frontend Developer">
@@ -15,6 +16,7 @@ import Footer from '../components/footer/Footer';
     <About />
     <WorkContainer />
     <Contact client:visible />
+    <Footer />
   </section>
-  <Footer />
+  <ScrollBtn client:idle />
 </Layout>

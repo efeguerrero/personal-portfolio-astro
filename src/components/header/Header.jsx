@@ -7,6 +7,8 @@ import styles from './header.module.scss';
 import MailBtn from '../common/MailBtn';
 import SocialList from '../common/SocialList';
 
+import chevronIcon from '../../assets/icons/chevrons-down.svg';
+
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -25,6 +27,9 @@ const Header = () => {
         </div>
       </div>
       <h2 className={styles.logo}>{`</>`}</h2>
+      <a className={styles.moreLink} href="#about">
+        <img className={styles.moreIcon} src={chevronIcon} alt="Flecha abajo" />
+      </a>
     </header>
   );
 };

@@ -1,7 +1,6 @@
 @use '../../styles/variables.scss';
 
 .header {
-  border: 1px solid red;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -15,6 +14,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  @include variables.size(laptop) {
+    position: relative;
   }
 }
 
@@ -104,23 +107,59 @@
   flex-direction: column;
 }
 
+.moreLink {
+  width: 3rem;
+  margin-top: 6rem;
+  display: none;
+
+  @include variables.size(laptop) {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.moreIcon {
+  width: 100%;
+  animation: focus 1.5s infinite;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 // //Animations
 
-// @keyframes wobble {
-//   0% {
-//     transform: translateX(0);
-//   }
-//   25% {
-//     transform: translateX(25px);
-//   }
+@keyframes focus {
+  0% {
+    filter: opacity(1);
+  }
+  25% {
+    filter: opacity(1);
+  }
+  45% {
+    filter: opacity(1);
+  }
+  50% {
+    filter: opacity(1);
+    transform: translateY(-10px);
+  }
+  65% {
+    filter: opacity(1);
+  }
 
-//   50% {
-//     transform: translateX(-25px);
-//   }
-//   100% {
-//     transform: translateX(0px);
-//   }
-// }
+  75% {
+    filter: opacity(1);
+  }
+  90% {
+    filter: opacity(1);
+  }
+}
 
 // @keyframes logoBackground {
 //   0% {
