@@ -12,6 +12,7 @@ import wordpress from '../assets/icons/wordpress.png';
 import spanish from '../assets/icons/spanish.png';
 import english from '../assets/icons/english.png';
 import astro from '../assets/icons/astro.svg';
+import tailwindcss from '../assets/icons/tailwindcss.svg';
 
 const skills = [
   {
@@ -28,69 +29,76 @@ const skills = [
   },
   {
     id: 3,
-    name: 'SASS',
-    icon: sass,
-    category: 'frontEnd',
-  },
-  {
-    id: 4,
     name: 'JavaScript',
     icon: javascript,
     category: 'frontEnd',
   },
   {
-    id: 5,
+    id: 4,
     name: 'react',
     icon: react,
     category: 'frontEnd',
   },
   {
+    id: 5,
+    name: 'astro',
+    icon: astro,
+    category: 'frontEnd',
+  },
+  {
     id: 6,
+    name: 'SASS',
+    icon: sass,
+    category: 'frontEnd',
+  },
+  {
+    id: 14,
+    name: 'tailwind',
+    icon: tailwindcss,
+    category: 'frontEnd',
+  },
+
+  {
+    id: 7,
     name: 'bootstrap',
     icon: bootstrap,
     category: 'frontEnd',
   },
   {
-    id: 7,
+    id: 8,
     name: 'wordpress',
     icon: wordpress,
     category: 'other',
   },
   {
-    id: 8,
+    id: 9,
     name: 'git',
     icon: git,
     category: 'other',
   },
   {
-    id: 9,
+    id: 10,
     name: 'github',
     icon: githubIcon,
     category: 'other',
   },
   {
-    id: 10,
+    id: 11,
     name: 'firebase',
     icon: firebase,
     category: 'backEnd',
   },
   {
-    id: 11,
+    id: 12,
     name: 'spanish',
     icon: spanish,
     category: 'language',
   },
   {
-    id: 12,
+    id: 13,
     name: 'english',
     icon: english,
     category: 'language',
-  },
-  {
-    id: 13,
-    name: 'astro',
-    icon: astro,
-    category: 'frontEnd',
   },
 ];
 

@@ -8,6 +8,7 @@
   height: 8vh;
   min-height: 3.5rem;
   position: absolute;
+  width: 100%;
 
   @include variables.size(tablet) {
     position: relative;

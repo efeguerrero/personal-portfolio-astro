@@ -29,10 +29,12 @@ const About = () => {
           <h3 className={styles.infoPersonal}>
             <p className={styles.infoPersonalText}>
               Hello! I'm Francisco, a developer based in Buenos Aires,
-              Argentina. Passionate about coding and{' '}
+              Argentina, mainly{' '}
               <span className={styles.infoPersonalTextHiglight}>
-                creating beautiful user experiences.
-              </span>
+                {' '}
+                specializing in React stack and Astro Framework.
+              </span>{' '}
+              Passionate about coding and creating beautiful user experiences.
             </p>
             <p className={styles.infoPersonalText}>
               I’m a well-organized person with great interpersonal skills, high
