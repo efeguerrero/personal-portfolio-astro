@@ -112,17 +112,9 @@
   margin-top: 6rem;
   // display: none;
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   left: 50%;
-  transform: translateY(-50%);
-
-  @include variables.size(laptop) {
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateY(-50%);
-  }
+  transform: translateX(-50%);
 
   &:hover {
     cursor: pointer;
