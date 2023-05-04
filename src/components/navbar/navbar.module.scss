@@ -6,9 +6,11 @@
   background: variables.$background;
   // overflow: hidden;
   height: 8vh;
-  position: relative;
+  min-height: 3.5rem;
+  position: absolute;
 
   @include variables.size(tablet) {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
