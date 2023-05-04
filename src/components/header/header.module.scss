@@ -111,6 +111,10 @@
   width: 3rem;
   margin-top: 6rem;
   // display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateY(-50%);
 
   @include variables.size(laptop) {
     display: block;
