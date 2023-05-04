@@ -112,9 +112,17 @@
   margin-top: 6rem;
   // display: none;
   position: absolute;
-  bottom: 7%;
+  bottom: 5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateY(-50%);
+
+  @include variables.size(laptop) {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateY(-50%);
+  }
 
   &:hover {
     cursor: pointer;
@@ -129,7 +137,7 @@
   }
 }
 
-// //Animation
+// //Animations
 
 @keyframes focus {
   0% {
