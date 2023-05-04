@@ -110,7 +110,7 @@
 .moreLink {
   width: 3rem;
   margin-top: 6rem;
-  display: none;
+  // display: none;
 
   @include variables.size(laptop) {
     display: block;
