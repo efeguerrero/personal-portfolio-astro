@@ -13,6 +13,7 @@ import spanish from '../assets/icons/spanish.png';
 import english from '../assets/icons/english.png';
 import astro from '../assets/icons/astro.svg';
 import tailwindcss from '../assets/icons/tailwindcss.svg';
+import typescript from '../assets/icons/typescript.svg';
 
 const skills = [
   {
@@ -31,6 +32,12 @@ const skills = [
     id: 3,
     name: 'JavaScript',
     icon: javascript,
+    category: 'frontEnd',
+  },
+  {
+    id: 14,
+    name: 'Typescript',
+    icon: typescript,
     category: 'frontEnd',
   },
   {
