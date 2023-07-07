@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     name: 'Stefanos Deco',
     img: stefanos,
-    demoURL: 'https://stefanosdeco-coderh.netlify.app/',
+    demoURL: 'https://ecomm-coderh.netlify.app/',
     githubURL:
       'https://github.com/efeguerrero/Coder-House--React-Course--Final-Project--ecommerce-site.git',
     technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'firebase'],
