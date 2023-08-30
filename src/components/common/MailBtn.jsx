@@ -1,8 +1,5 @@
 import React from 'react';
 
-//Style Import
-import styles from './mailBtn.module.scss';
-
 const MailBtn = () => {
   return (
     <a

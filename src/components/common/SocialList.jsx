@@ -1,26 +1,24 @@
 import React from 'react';
 
-//Style Import
-import styles from './socialList.module.scss';
+//Icon Import
+import ReactIcon from '../../assets/icons/ReactIcon.jsx';
 
 //Data Import
 import socials from '../../utils/socials';
 
-const SocialList = ({ style }) => {
-  const cssStyle = style || '';
-
+const SocialList = () => {
   return (
-    <div className={styles[`socialList${cssStyle}`]}>
+    <div className="flex justify-center items-center w-max gap-5">
       {socials.map((item) => (
         <a
-          className={styles[`socialListLink${cssStyle}`]}
+          className="flex items-center cursor-pointer justify-center"
           href={item.url}
           target="_blank"
+          key={item.id}
         >
-          <img
-            className={styles[`socialListIcons${cssStyle}`]}
-            src={item.icon}
-            alt={item.name}
+          <ReactIcon
+            icon={item.name}
+            className="w-8 h-11 text-alpha hover:text-white transition-all duration-200 ease-in-out lg:w-12"
           />
         </a>
       ))}
