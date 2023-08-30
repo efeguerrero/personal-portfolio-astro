@@ -18,7 +18,7 @@ const SocialList = () => {
         >
           <ReactIcon
             icon={item.name}
-            className="w-8 h-11 text-alpha hover:text-white transition-all duration-200 ease-in-out lg:w-12"
+            className="w-8 h-11 text-alpha hover:text-white transition-all duration-300 ease-in-out lg:w-12"
           />
         </a>
       ))}

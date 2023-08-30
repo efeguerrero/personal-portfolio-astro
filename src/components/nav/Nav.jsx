@@ -41,8 +41,8 @@ const Nav = () => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay: 0.5, type: 'spring', duration: 1.5, bounce: 0 },
-        opacity: { delay: 0.5, duration: 0.01 },
+        pathLength: { delay: 1, type: 'spring', duration: 1.5, bounce: 0 },
+        opacity: { delay: 1, duration: 0.01 },
       },
     },
     hoverClose: {
@@ -172,22 +172,30 @@ const Nav = () => {
                               />
                             </div>
                           </div>
-                          <div className="flex flex-col gap-6 items-start justify-start">
+                          <div className="flex flex-col gap-6 items-center lg:items-start justify-start">
                             {navigation.map((item, index) => {
                               return (
                                 <motion.div
                                   key={index}
                                   whileHover="hover"
-                                  initial={{ y: '-100vw' }}
-                                  animate={{ y: 0 }}
+                                  initial={{
+                                    y: 'var(--translate-wide,0)',
+                                    opacity: 'var(--opacity-small,1)',
+                                  }}
+                                  animate={{ y: 0, opacity: 1 }}
                                   transition={{
+                                    opacity: {
+                                      type: 'tween',
+                                      duration: 1,
+                                      delay: 0.3 + index / 5,
+                                    },
                                     y: {
                                       type: 'tween',
                                       duration: 0.8,
                                       delay: 0.2 - index / 10,
                                     },
                                   }}
-                                  className="relative my-4 flex items-center gap-6"
+                                  className="relative my-4 flex items-center gap-6 lg:[--translate-wide:-100vw] [--opacity-small:0] lg:[--opacity-small:1]"
                                 >
                                   <motion.div
                                     variants={{
@@ -206,7 +214,7 @@ const Nav = () => {
                                         },
                                       },
                                     }}
-                                    className="h-4 absolute left-[-3rem] rounded-md w-4 bg-white/80 "
+                                    className="hidden lg:block h-4 absolute left-[-3rem] rounded-md w-4 bg-white/80 "
                                   ></motion.div>
                                   <motion.a
                                     variants={{
