@@ -20,6 +20,8 @@ module.exports = {
         grayDark: '#76818e',
         alpha: '#2cb67d',
         bravo: '#7f5af0',
+        bravoDark: '#593fa8',
+        bravoDarkest: '#332460',
       },
       transitionTimingFunction: {
         spring: 'cubic-bezier(0.35,0.78,0.57,1.41)',

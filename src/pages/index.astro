@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/navbar/Navbar';
+import Nav from '../components/nav/Nav.jsx';
 // import Header from '../components/header/Header';
 import About from '../components/about/About';
 import WorkContainer from '../components/work/WorkContainer';
@@ -12,8 +12,9 @@ import Header from '../components/Header.astro';
 
 <Layout title="Francisco Guerrero | Frontend Developer">
   <section class="appContainer">
-    <!-- <Navbar client:visible /> -->
+    <Nav client:visible />
     <!-- <Header client:visible /> -->
+    <Header />
     <Header />
     <!-- <About />
     <WorkContainer />
