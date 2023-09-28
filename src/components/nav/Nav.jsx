@@ -25,6 +25,12 @@ const navigation = [
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle('overflow-hidden');
+    document.body.classList.toggle('overscroll-behavior-contain');
+  };
+
   //Framer Motion Variants
   const trigger = {
     initial: {
@@ -73,7 +79,7 @@ const Nav = () => {
             <h2 className="text-3xl leading-none tracking-widest font-bold text-alpha">{`{fg}`}</h2>
           </a>
 
-          <Collapsible.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+          <Collapsible.Root open={isMenuOpen} onOpenChange={handleMenuClick}>
             <Collapsible.Trigger asChild>
               <motion.div
                 variants={trigger}
