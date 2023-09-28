@@ -30,26 +30,38 @@ const Nav = () => {
     initial: {
       rotate: 0,
       translateY: 0,
-      position: 'static',
+
       transition: {
-        // type: 'spring',
+        type: 'tween',
+        ease: 'easeInOut',
         duration: 0.3,
-        // stiffness: 300,
-        // damping: 20,
       },
     },
+
+    menuIcon: {
+      rotate: 90,
+      transition: {
+        type: 'tween',
+        ease: 'easeInOut',
+        duration: 0.3,
+      },
+    },
+
     hidden: {
       scale: 0,
+      transition: {
+        type: 'tween',
+        ease: 'easeInOut',
+        duration: 0.3,
+      },
     },
     activated: {
-      position: 'absolute',
       rotate: 'var(--rotate)',
       translateY: 'var(--translate)',
       transition: {
-        // type: 'spring',
+        type: 'tween',
+        ease: 'easeInOut',
         duration: 0.3,
-        // stiffness: 300,
-        // damping: 20,
       },
     },
   };
@@ -64,6 +76,9 @@ const Nav = () => {
           <Collapsible.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <Collapsible.Trigger asChild>
               <motion.div
+                variants={trigger}
+                initial="initial"
+                animate={isMenuOpen ? 'menuIcon' : 'initial'}
                 id="menuIcon"
                 className="relative translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
               >
@@ -71,7 +86,7 @@ const Nav = () => {
                   variants={trigger}
                   initial="initial"
                   animate={isMenuOpen ? 'activated' : 'initial'}
-                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:45deg]  [--translate:-50%] "
+                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:-45deg] origin-right  [--translate:-50%] "
                 />
                 <motion.div
                   variants={trigger}
@@ -83,7 +98,7 @@ const Nav = () => {
                   variants={trigger}
                   initial="initial"
                   animate={isMenuOpen ? 'activated' : 'initial'}
-                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:135deg]  [--translate:50%] "
+                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:45deg] origin-right  [--translate:50%] "
                 />
               </motion.div>
             </Collapsible.Trigger>
