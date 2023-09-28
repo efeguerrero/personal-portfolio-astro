@@ -1,4 +1,11 @@
 @use './variables.scss';
+@tailwind utilities;
+
+@layer utilities {
+  .tapColor-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
 
 /*GLOBAL SETTINGS*/
 

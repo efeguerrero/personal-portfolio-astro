@@ -86,7 +86,7 @@ const Nav = () => {
                 initial="initial"
                 animate={isMenuOpen ? 'menuIcon' : 'initial'}
                 id="menuIcon"
-                className="relative translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
+                className="tapColor-none relative translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
               >
                 <motion.div
                   variants={trigger}
