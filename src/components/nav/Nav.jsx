@@ -106,10 +106,7 @@ const Nav = () => {
             <AnimatePresence>
               {isMenuOpen && (
                 <Portal.Root asChild>
-                  <Collapsible.Content
-                    asChild
-                    onCloseAutoFocus={(e) => e.preventDefault()}
-                  >
+                  <Collapsible.Content forceMount asChild>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -142,34 +139,15 @@ const Nav = () => {
                                 }}
                                 className="relative my-4 flex items-center gap-6 lg:[--translate-wide:-100vw] [--opacity-small:0] lg:[--opacity-small:1]"
                               >
-                                <motion.div
-                                  variants={{
-                                    hover: {
-                                      width: '115%',
-                                      height: '115%',
-                                      left: '50%',
-                                      x: '-50%',
-                                      transition: {
-                                        backgroundColor: {
-                                          duration: 0,
-                                        },
-                                        duration: 0.3,
-
-                                        type: 'tween',
-                                      },
-                                    },
-                                  }}
-                                  className="hidden lg:block h-4 absolute left-[-3rem] rounded-md w-4 bg-white/80 "
-                                ></motion.div>
                                 <motion.a
                                   variants={{
                                     hover: {
-                                      color: '#593fa8',
+                                      letterSpacing: '5px',
                                     },
                                   }}
                                   href={item.href}
                                   onClick={() => setIsMenuOpen(false)}
-                                  className="transition-al tracking-widest z-10 text-6xl font-extrabold uppercase text-white/80  "
+                                  className="transition-al tracking-widest z-10 text-4xl font-extrabold uppercase text-white/80  "
                                 >
                                   {item.name}
                                 </motion.a>
