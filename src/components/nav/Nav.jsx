@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState } from 'react';
 
 //Radix Import
-import * as Dialog from '@radix-ui/react-dialog';
+import * as Collapsible from '@radix-ui/react-collapsible';
+import * as Portal from '@radix-ui/react-portal';
 
 //Framer Motion Imports
 import {
@@ -23,103 +24,74 @@ const navigation = [
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    latest > 70 ? setIsSticky(true) : setIsSticky(false);
-  });
 
   //Framer Motion Variants
-
-  const draw = {
-    hidden: {
-      pathLength: 0,
-      opacity: 0,
-    },
+  const trigger = {
     initial: {
-      pathLength: 1,
-      opacity: 1,
+      rotate: 0,
+      translateY: 0,
+      position: 'static',
       transition: {
-        pathLength: { delay: 1, type: 'spring', duration: 1.5, bounce: 0 },
-        opacity: { delay: 1, duration: 0.01 },
+        // type: 'spring',
+        duration: 0.3,
+        // stiffness: 300,
+        // damping: 20,
       },
     },
-    hoverClose: {
-      pathLength: 0,
-      opacity: 0,
+    hidden: {
+      scale: 0,
+    },
+    activated: {
+      position: 'absolute',
+      rotate: 'var(--rotate)',
+      translateY: 'var(--translate)',
       transition: {
-        pathLength: { delay: 0, type: 'spring', duration: 0.8, bounce: 0 },
-        opacity: { delay: 0, duration: 0.8 },
+        // type: 'spring',
+        duration: 0.3,
+        // stiffness: 300,
+        // damping: 20,
       },
     },
   };
-
-  const navContainer = {
-    sticky: {
-      backgroundColor: '#fff',
-      boxShadow: '0 4px 30px 0px rgba(0,0,0,0.20)',
-    },
-  };
-
   return (
-    <motion.section variants={navContainer} className="py-6 inset-x-0 top-0">
+    <section className="py-6 inset-x-0 top-0">
       <Container>
-        <nav className="w-full flex items-center justify-between bg-transparent">
+        <nav className=" w-full flex items-center justify-between bg-transparent">
           <a href="/" className="cursor-pointer z-20 ">
             <h2 className="text-3xl leading-none tracking-widest font-bold text-alpha">{`{fg}`}</h2>
           </a>
 
-          <Dialog.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <Dialog.Trigger asChild>
+          <Collapsible.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <Collapsible.Trigger asChild>
               <motion.div
                 id="menuIcon"
-                className="translate-y-[2px] flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
+                className="relative translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
               >
                 <motion.div
-                  layoutId="line1"
-                  className="  block h-[2px] w-[1.8rem] rounded-sm bg-alpha "
+                  variants={trigger}
+                  initial="initial"
+                  animate={isMenuOpen ? 'activated' : 'initial'}
+                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:45deg]  [--translate:-50%] "
                 />
-                <motion.div className=" block h-[2px] w-[1.8rem] rounded-sm bg-alpha " />
                 <motion.div
-                  layoutId="line2"
-                  className=" block h-[2px] w-[1.8rem] rounded-sm bg-alpha"
+                  variants={trigger}
+                  initial="initial"
+                  animate={isMenuOpen ? 'hidden' : 'initial'}
+                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha "
+                />
+                <motion.div
+                  variants={trigger}
+                  initial="initial"
+                  animate={isMenuOpen ? 'activated' : 'initial'}
+                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:135deg]  [--translate:50%] "
                 />
               </motion.div>
-            </Dialog.Trigger>
-            <AnimatePresence>
-              {isMenuOpen && (
-                // <Dialog.Close asChild>
-                <motion.div
-                  onClick={() => setIsMenuOpen(false)}
-                  id="menuCloseIcon"
-                  className="translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
-                >
-                  <motion.div
-                    layoutId="line1"
-                    animate={{
-                      rotate: 45,
-                    }}
-                    className="block h-[2px] w-[1.8rem] rounded-sm bg-alpha "
-                  ></motion.div>
-                  <motion.div
-                    layoutId="line2"
-                    animate={{
-                      rotate: -45,
-                    }}
-                    className="block h-[2px] w-[1.8rem] rounded-sm bg-alpha "
-                  ></motion.div>
-                </motion.div>
-                // </Dialog.Close>
-              )}
-            </AnimatePresence>
+            </Collapsible.Trigger>
             {/* Dialog */}
             <AnimatePresence>
               {isMenuOpen && (
-                <Dialog.Portal forceMount>
-                  <Dialog.Overlay />
-                  <Dialog.Content
+                <Portal.Root asChild>
+                  <Collapsible.Content
                     asChild
                     onCloseAutoFocus={(e) => e.preventDefault()}
                   >
@@ -192,14 +164,14 @@ const Nav = () => {
                         </div>
                       </section>
                     </motion.div>
-                  </Dialog.Content>
-                </Dialog.Portal>
+                  </Collapsible.Content>
+                </Portal.Root>
               )}
             </AnimatePresence>
-          </Dialog.Root>
+          </Collapsible.Root>
         </nav>
       </Container>
-    </motion.section>
+    </section>
   );
 };
 
