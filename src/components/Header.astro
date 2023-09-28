@@ -1,39 +1,43 @@
 ---
+//Component Imports
 import MailBtn from '../components/common/MailBtn';
 import SocialList from '../components/common/SocialList';
 import ReactIcon from '../assets/icons/ReactIcon';
+import Container from '@/components/common/Container.astro';
 ---
 
-<header
-  class="h-[100svh] flex flex-col items-start justify-center bg-transparent md:flex-row p-8 md:items-center md:justify-between gap-4 lg:relative"
->
-  <div>
-    <h2
-      class="text-white font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem] md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-    >
-      Hi, <br /> I'm <span
-        class="text-alpha font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-        >F</span
-      >rancisco. <br />
-      Web <span
-        class="text-bravo font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-        >d</span
-      >eveloper.
-    </h2>
-    <div class="mt-7 flex flex-col gap-8">
-      <MailBtn client:load />
-      <SocialList client:load />
-    </div>
-  </div>
-  <h2
-    class="hidden md:-translate-y-[4rem] md:block md:font-black md:text-[13rem] text-bravo font-Inter md:tracking-[2px] lg:text-[15.5rem] xl:text-[19rem]"
+<Container>
+  <header
+    class="h-[calc(100svh-84px)] flex flex-col items-start justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
   >
-    {`</>`}
-  </h2>
-  <a class="absolute bottom-8 inset-x-0 cursor-pointer mx-auto" href="#about">
-    <ReactIcon
-      icon="chevronDown"
-      className="w-12 h-12 animate-bounce mx-auto"
-    />
-  </a>
-</header>
+    <div>
+      <h2
+        class="text-white font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem] md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
+      >
+        Hi, <br /> I'm <span
+          class="text-alpha font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
+          >F</span
+        >rancisco. <br />
+        Web <span
+          class="text-bravo font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
+          >d</span
+        >eveloper.
+      </h2>
+      <div class="mt-7 flex flex-col gap-8">
+        <MailBtn client:load />
+        <SocialList client:load />
+      </div>
+    </div>
+    <h2
+      class="hidden md:-translate-y-[4rem] md:block md:font-black md:text-[13rem] text-bravo font-Inter md:tracking-[2px] lg:text-[15.5rem] xl:text-[19rem]"
+    >
+      {`</>`}
+    </h2>
+    <a class="absolute bottom-8 inset-x-0 cursor-pointer mx-auto" href="#about">
+      <ReactIcon
+        icon="chevronDown"
+        className="w-12 h-12 animate-bounce mx-auto"
+      />
+    </a>
+  </header>
+</Container>

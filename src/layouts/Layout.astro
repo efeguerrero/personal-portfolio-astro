@@ -7,6 +7,10 @@ const { title } = Astro.props;
 
 // Global StyleSheet Import
 import '../styles/app.scss';
+
+//Component Import
+import Nav from '@/components/nav/Nav';
+import Footer from '@/components/footer/Footer';
 ---
 
 <!DOCTYPE html>
@@ -49,13 +53,7 @@ import '../styles/app.scss';
     <!--Meta Tags -->
   </head>
   <body>
+    <Nav client:visible />
     <slot />
   </body>
 </html>
-
-<style lang="scss">
-  body,
-  html {
-    height: 100%;
-  }
-</style>

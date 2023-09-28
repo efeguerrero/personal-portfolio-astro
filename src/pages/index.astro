@@ -1,25 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/nav/Nav.jsx';
+
 // import Header from '../components/header/Header';
 import About from '../components/about/About';
 import WorkContainer from '../components/work/WorkContainer';
 import Contact from '../components/contact/Contact';
-import Footer from '../components/footer/Footer';
+
 import ScrollBtn from '../components/scrollBtn/ScrollBtn';
 import Header from '../components/Header.astro';
 ---
 
 <Layout title="Francisco Guerrero | Frontend Developer">
   <section class="appContainer">
-    <Nav client:visible />
     <!-- <Header client:visible /> -->
     <Header />
     <Header />
     <!-- <About />
     <WorkContainer />
-    <Contact client:visible />
-    <Footer /> -->
+    <Contact client:visible />-->
   </section>
   <ScrollBtn client:idle />
 </Layout>
