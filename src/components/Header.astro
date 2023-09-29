@@ -8,32 +8,28 @@ import Container from '@/components/common/Container.astro';
 
 <Container>
   <header
-    class="h-[calc(100svh-84px)] flex flex-col items-start justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
+    class="h-[100svh] flex-col items-start flex justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
   >
-    <div>
-      <h2
-        class="text-white font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem] md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-      >
-        Hi, <br /> I'm <span
-          class="text-alpha font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-          >F</span
-        >rancisco. <br />
-        Web <span
-          class="text-bravo font-extrabold text-[2.6rem] tracking-[-1.2px] leading-[2.4rem md:text-5xl md:leading-[2.8rem] lg:text-6xl lg:leading-[4rem] xl:text-8xl xl:leading-[5.3rem]"
-          >d</span
-        >eveloper.
-      </h2>
-      <div class="mt-7 flex flex-col gap-8">
-        <MailBtn client:load />
-        <!-- <SocialList client:load /> -->
+    <div class="@container w-full gap-8 flex flex-col lg:flex-row lg:items-end">
+      <div class="flex flex-col justify-center w-full items-start">
+        <h2
+          class="text-neutral-200 font-normal leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,4.2rem)] @[77rem]:text-[5.5rem]"
+        >
+          I'm Francisco.
+        </h2>
+        <h2
+          class="text-neutral-200 font-normal leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,4.2rem)] @[77rem]:text-[5.5rem]"
+        >
+          Web Developer.
+        </h2>
       </div>
+      <h3
+        class="text-neutral-400 font-light tracking-tighter leading-normal pb-[8px] text-right w-full @[1rem]:[font-size:clamp(1rem_,4cqw_,1.1rem)]"
+      >
+        Buenos Aires based developer. <br />
+        Specialized in React stack and Astro framework.
+      </h3>
     </div>
-    <!-- <img src={image} alt="ss" /> -->
-    <!-- <h2
-      class="hidden md:-translate-y-[4rem] md:block md:font-black md:text-[13rem] text-bravo font-Inter md:tracking-[2px] lg:text-[15.5rem] xl:text-[19rem]"
-    >
-      {`</>`}
-    </h2> -->
     <a class="absolute bottom-8 inset-x-0 cursor-pointer mx-auto" href="#about">
       <ReactIcon
         icon="chevronDown"
