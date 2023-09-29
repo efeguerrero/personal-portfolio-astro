@@ -8,7 +8,7 @@ import Container from '@/components/common/Container.astro';
 
 <Container>
   <header
-    class="h-[100svh] flex-col items-start flex justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
+    class="relative h-[100svh] flex-col items-start flex justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
   >
     <div class="@container w-full gap-8 flex flex-col lg:flex-row lg:items-end">
       <div class="flex flex-col justify-center w-full items-start">
@@ -30,11 +30,36 @@ import Container from '@/components/common/Container.astro';
         Specialized in React stack and Astro framework.
       </h3>
     </div>
-    <a class="absolute bottom-8 inset-x-0 cursor-pointer mx-auto" href="#about">
-      <ReactIcon
-        icon="chevronDown"
-        className="w-12 h-12 animate-bounce mx-auto"
-      />
-    </a>
+    <div class="absolute bottom-14 flex justify-between w-full items-end">
+      <div class="flex flex-col gap-5 justify-center items-start">
+        <a
+          class="text-neutral-400 uppercase font-light text-xs tracking-tight underline underline-offset-2"
+          target="_blank"
+          href="https://github.com/efeguerrero"
+        >
+          Twitter
+        </a>
+        <a
+          class="text-neutral-400 uppercase font-light text-xs tracking-tight underline underline-offset-2"
+          target="_blank"
+          href="https://github.com/efeguerrero"
+        >
+          Linkedin
+        </a>
+        <a
+          class="text-neutral-400 uppercase font-light text-xs tracking-tight underline underline-offset-2"
+          target="_blank"
+          href="https://github.com/efeguerrero"
+        >
+          Github
+        </a>
+      </div>
+      <div
+        class="flex rotate-90 origin-top-right translate-y-[100%] justify-center items-center gap-1"
+      >
+        <h4 class="uppercase tracking-[4px] text-xs text-violet-800">scroll</h4>
+        <div class="h-[1px] bg-violet-800 w-[12svh]"></div>
+      </div>
+    </div>
   </header>
 </Container>

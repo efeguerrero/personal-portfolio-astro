@@ -6,6 +6,10 @@
   .tapColor-none {
     -webkit-tap-highlight-color: transparent;
   }
+  .text-vertical {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+  }
 }
 
 /*GLOBAL SETTINGS*/
