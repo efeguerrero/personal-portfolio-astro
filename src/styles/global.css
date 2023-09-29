@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .tapColor-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/*GLOBAL SETTINGS*/
+
+body {
+  scrollbar-width: 10px;
+  scrollbar-base-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  /* display: none; Remove scrollbar for Chrome, Safari, and Opera */
+  width: 10px;
+  background: #d1d5db;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+button:focus {
+  outline: none;
+}

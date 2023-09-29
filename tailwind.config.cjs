@@ -12,24 +12,15 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        white: '#ffffff',
-        black: '#242629',
-        darkBlack: '#16161a',
-        gray: '#94a1b2',
-        grayLight: '#cad0d9',
-        grayDark: '#76818e',
         alpha: '#2cb67d',
         bravo: '#7f5af0',
-        bravoDark: '#593fa8',
-        bravoDarkest: '#332460',
       },
       transitionTimingFunction: {
         spring: 'cubic-bezier(0.35,0.78,0.57,1.41)',
       },
     },
     fontFamily: {
-      // anton: ['Anton', 'sans-serif'],
-      // roboto: ['Roboto', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
     },
 
     container: {

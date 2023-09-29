@@ -5,12 +5,15 @@ export interface Props {
 
 const { title } = Astro.props;
 
-// Global StyleSheet Import
-import '../styles/app.scss';
+// // Global StyleSheet Import
+import '@/styles/global.css';
 
 //Component Import
 import Nav from '@/components/nav/Nav';
 import Footer from '@/components/footer/Footer';
+
+//Image imports
+import background from '@/assets/shapes/linesBackground.svg';
 ---
 
 <!DOCTYPE html>
@@ -49,11 +52,23 @@ import Footer from '@/components/footer/Footer';
     <meta name="ROBOTS" content="ALL" />
     <meta name="language" content="English" />
     <meta name="distribution" content="Global" />
-
     <!--Meta Tags -->
+
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Import -->
   </head>
-  <body>
-    <Nav client:visible />
-    <slot />
+  <body class="bg-neutral-800 font-inter scroll-smooth">
+    <section
+      class="bg-[url('/linesBackground.svg')] bg-no-repeat bg-fixed bg-cover h-full w-full"
+    >
+      <Nav client:visible />
+      <slot />
+    </section>
   </body>
 </html>

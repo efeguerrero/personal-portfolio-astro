@@ -72,11 +72,13 @@ const Nav = () => {
     },
   };
   return (
-    <section className="py-6 inset-x-0 top-0">
+    <section className="absolute pb-8 pt-14 inset-x-0 top-0 lg:z-20">
       <Container>
         <nav className=" w-full flex items-center justify-between bg-transparent">
-          <a href="/" className="cursor-pointer z-20 ">
-            <h2 className="text-3xl leading-none tracking-widest font-bold text-alpha">{`{fg}`}</h2>
+          <a href="/" className="cursor-pointer z-20 mt-[2px]">
+            <h2 className="text-2xl leading-none tracking-tight font-bold uppercase text-neutral-400 hover:text-neutral-200 transition-colors duration-200 ease-in-out">
+              fran g.
+            </h2>
           </a>
 
           <Collapsible.Root open={isMenuOpen} onOpenChange={handleMenuClick}>
@@ -86,25 +88,25 @@ const Nav = () => {
                 initial="initial"
                 animate={isMenuOpen ? 'menuIcon' : 'initial'}
                 id="menuIcon"
-                className="tapColor-none relative translate-y-[2px] z-20 flex flex-col gap-[7px] items-center group h-full w-[1.8rem] cursor-pointer "
+                className="lg:hidden tapColor-none relative [--translateInitial:1px] z-20 flex flex-col gap-[6px] items-center group h-full w-[1.8rem] cursor-pointer "
               >
                 <motion.div
                   variants={trigger}
                   initial="initial"
                   animate={isMenuOpen ? 'activated' : 'initial'}
-                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:-45deg] origin-right  [--translate:-50%] "
+                  className="h-[2px] w-[1.5rem] rounded-sm bg-neutral-400 [--rotate:-45deg] origin-right  [--translate:-50%] "
                 />
                 <motion.div
                   variants={trigger}
                   initial="initial"
                   animate={isMenuOpen ? 'hidden' : 'initial'}
-                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha "
+                  className="h-[2px] w-[1.5rem] rounded-sm bg-neutral-400 "
                 />
                 <motion.div
                   variants={trigger}
                   initial="initial"
                   animate={isMenuOpen ? 'activated' : 'initial'}
-                  className="h-[2px] w-[1.8rem] rounded-sm bg-alpha [--rotate:45deg] origin-right  [--translate:50%] "
+                  className="h-[2px] w-[1.5rem] rounded-sm bg-neutral-400 [--rotate:45deg] origin-right  [--translate:50%] "
                 />
               </motion.div>
             </Collapsible.Trigger>
@@ -168,6 +170,20 @@ const Nav = () => {
               )}
             </AnimatePresence>
           </Collapsible.Root>
+          {/* lg screen nav */}
+          <div className="hidden lg:flex gap-10 justify-center items-center">
+            {navigation.map((item, index) => {
+              return (
+                <a
+                  key={index}
+                  className="text-neutral-400 uppercase font-light text-sm tracking-[4px] cursor-pointer hover:text-neutral-200 transition-colors duration-200 ease-in-out"
+                  href={item.href}
+                >
+                  {item.name}
+                </a>
+              );
+            })}
+          </div>
         </nav>
       </Container>
     </section>
