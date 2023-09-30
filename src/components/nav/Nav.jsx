@@ -72,11 +72,11 @@ const Nav = () => {
     },
   };
   return (
-    <section className="absolute pb-8 pt-14 inset-x-0 top-0 lg:z-20">
+    <section className="absolute pb-8 pt-10 lg:pt-14 inset-x-0 top-0 lg:z-20">
       <Container>
         <nav className=" w-full flex items-center justify-between bg-transparent">
           <a href="/" className="cursor-pointer z-20 mt-[2px]">
-            <h2 className="text-2xl leading-none tracking-tight font-bold uppercase text-neutral-400 hover:text-neutral-200 transition-colors duration-200 ease-in-out">
+            <h2 className="text-2xl leading-none tracking-widest font-bold uppercase text-neutral-400 hover:text-neutral-200 transition-colors duration-200 ease-in-out">
               fran g.
             </h2>
           </a>
