@@ -7,10 +7,10 @@ import Container from '@/components/common/Container.astro';
 ---
 
 <Container>
-  <header
-    class="relative h-[100svh] flex-col items-start flex justify-center bg-transparent md:flex-row md:items-center md:justify-between gap-4 lg:relative"
-  >
-    <div class="@container w-full gap-8 flex flex-col lg:flex-row lg:items-end">
+  <header class="relative min-h-[100svh] grid grid-rows-3 items-center">
+    <div
+      class="@container w-full gap-8 flex flex-col lg:flex-row lg:items-end row-start-2"
+    >
       <div class="flex flex-col justify-center w-full items-start">
         <h2
           class="text-neutral-200 font-normal leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,4.2rem)] @[77rem]:text-[5.5rem]"
@@ -30,7 +30,9 @@ import Container from '@/components/common/Container.astro';
         Specialized in React stack and Astro framework.
       </h3>
     </div>
-    <div class="absolute bottom-14 flex justify-between w-full items-end">
+    <div
+      class="flex pb-14 justify-between w-full items-end row-start-3 self-end"
+    >
       <div class="flex flex-col gap-5 justify-center items-start">
         <a
           class="text-neutral-400 uppercase font-light text-xs tracking-tight underline underline-offset-2"
