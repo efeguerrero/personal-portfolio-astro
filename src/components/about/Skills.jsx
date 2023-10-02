@@ -35,12 +35,16 @@ const Skills = () => {
 
                       <Tooltip.Portal>
                         <Tooltip.Content sideOffset={5}>
-                          <motion.div className="rounded-md bg-neutral-300 px-2 py-1">
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="rounded-md bg-neutral-300 px-2 py-1"
+                          >
                             <h3 className="text-neutral-900 capitalize text-sm font-semibold ">
                               {skill.name}
                             </h3>
+                            <Tooltip.Arrow className="fill-neutral-300" />
                           </motion.div>
-                          <Tooltip.Arrow className="fill-neutral-300" />
                         </Tooltip.Content>
                       </Tooltip.Portal>
                     </Tooltip.Root>
