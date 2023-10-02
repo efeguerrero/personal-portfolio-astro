@@ -1,0 +1,54 @@
+---
+//Components Imports
+import Container from '@/components/common/Container.astro';
+import Skills from '@/components/about/Skills.jsx';
+
+//Image imports
+import profileImg from '@/assets/images/profileImg.jpg';
+---
+
+<Container>
+  <section
+    id="about"
+    class="flex flex-col items-center justify-center py-32 sm:py-32 gap-8"
+  >
+    <h2
+      class="font-normal text-3xl w-min text-right text-neutral-200 leading-none tracking-tighter mr-auto"
+    >
+      about me
+    </h2>
+    <div
+      class="flex flex-col items-center justify-center md:flex-row md:items-start lg:gap-16 gap-8"
+    >
+      <h3 class="font-normal text-base text-neutral-300">
+        Hello! I'm Francisco, a web developer based in Buenos Aires, Argentina,
+        mainly{' '}
+        <span class="">
+          {' '}
+          specializing in React stack and Astro Framework.
+          <br />
+          <br />
+        </span>{' '}
+      </h3>
+      <div
+        class="aspect-square rounded-3xl overflow-hidden flex items-center justify-center"
+      >
+        <img
+          src="https://images.pexels.com/photos/3220386/pexels-photo-3220386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Personal Photo"
+          class="grayscale w-full"
+        />
+      </div>
+      <div>
+        <h3 class="font-normal text-neutral-300">
+          Passionate about coding and creating beautiful user experiences. I’m a
+          well-organized person with great interpersonal skills, high attention
+          to detail and a great enthusiasm for problem solving.
+          <br /><br />I’m always open to discussing new work or partnership
+          opportunities.
+        </h3>
+        <Skills client:idle />
+      </div>
+    </div>
+  </section>
+</Container>

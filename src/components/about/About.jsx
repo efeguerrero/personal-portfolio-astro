@@ -7,7 +7,7 @@ import styles from './about.module.scss';
 import profileImg from '../../assets/images/profileImg.jpg';
 
 //Child Imports
-import Skills from './Skills';
+import Skills from './SkillsOld';
 
 const About = () => {
   return (

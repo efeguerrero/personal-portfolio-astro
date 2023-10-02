@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+widht="inherit" height="inherit" fill="currentColor"
+   width="45.957314mm"
+   height="24.786585mm"
+   viewBox="0 0 45.957314 24.786585"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="portfolio Icons.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72426347"
+     inkscape:cx="396.26464"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-81.681375,-70.925589)">
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:36.0348px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Semi-Bold';letter-spacing:-0.52801px;fill:#101113;stroke-width:2.75666"
+       x="74.976097"
+       y="101.19755"
+       id="text1"
+       transform="scale(1.0573112,0.94579536)"
+       inkscape:export-filename="english.svg"
+       inkscape:export-xdpi="178.30614"
+       inkscape:export-ydpi="178.30614"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Bold';stroke-width:2.75666"
+         x="74.976097"
+         y="101.19755">EN</tspan></text>
+  </g>
+</svg>
