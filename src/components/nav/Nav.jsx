@@ -229,7 +229,7 @@ const Nav = () => {
               return (
                 <a
                   key={index}
-                  className="text-neutral-400 uppercase font-light text-sm tracking-[4px] cursor-pointer hover:text-neutral-200 transition-colors duration-200 ease-in-out"
+                  className="text-neutral-300 uppercase font-light text-sm tracking-[4px] cursor-pointer hover:text-neutral-50 transition-colors duration-200 ease-in-out"
                   href={item.href}
                 >
                   {item.name}
