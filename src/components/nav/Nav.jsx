@@ -71,6 +71,22 @@ const Nav = () => {
       },
     },
   };
+
+  const socialLinks = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (customDelay) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: customDelay,
+      },
+    }),
+  };
+
   return (
     <section className="absolute pb-8 pt-10 lg:pt-14 inset-x-0 top-0 lg:z-20">
       <Container>
@@ -119,51 +135,88 @@ const Nav = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="fixed bottom-0 z-10 h-[100dvh] w-full bg-black"
+                      className="fixed bottom-0 z-10 w-full bg-neutral-900"
                     >
-                      <section className="relative flex h-full flex-col items-center justify-center p-8 lg:flex-row lg:p-16">
-                        <div className="flex flex-col gap-6 items-center lg:items-start justify-start">
-                          {navigation.map((item, index) => {
-                            return (
-                              <motion.div
-                                key={index}
-                                whileHover="hover"
-                                initial={{
-                                  y: 'var(--translate-wide,0)',
-                                  opacity: 'var(--opacity-small,1)',
-                                }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{
-                                  opacity: {
-                                    type: 'tween',
-                                    duration: 1,
-                                    delay: 0.3 + index / 5,
-                                  },
-                                  y: {
-                                    type: 'tween',
-                                    duration: 0.8,
-                                    delay: 0.2 - index / 10,
-                                  },
-                                }}
-                                className="relative my-4 flex items-center gap-6 lg:[--translate-wide:-100vw] [--opacity-small:0] lg:[--opacity-small:1]"
-                              >
-                                <motion.a
-                                  variants={{
-                                    hover: {
-                                      letterSpacing: '5px',
+                      <Container>
+                        <section className="relative w-full grid grid-rows-[1fr_3fr_1fr] h-[100dvh] items-center justify-center ">
+                          <div className="row-start-2 w-full flex flex-col gap-6 items-center justify-start">
+                            {navigation.map((item, index) => {
+                              return (
+                                <motion.div
+                                  key={index}
+                                  whileHover="hover"
+                                  initial={{
+                                    y: 'var(--translate-wide,0)',
+                                    opacity: 'var(--opacity-small,1)',
+                                  }}
+                                  animate={{ y: 0, opacity: 1 }}
+                                  transition={{
+                                    opacity: {
+                                      type: 'tween',
+                                      duration: 1,
+                                      delay: 0.3 + index / 5,
+                                    },
+                                    y: {
+                                      type: 'tween',
+                                      duration: 0.8,
+                                      delay: 0.2 - index / 10,
                                     },
                                   }}
-                                  href={item.href}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  className="transition-al tracking-widest z-10 text-4xl font-extrabold uppercase text-white/80  "
+                                  className="relative my-4 flex items-center gap-6 lg:[--translate-wide:-100vw] [--opacity-small:0] lg:[--opacity-small:1]"
                                 >
-                                  {item.name}
-                                </motion.a>
-                              </motion.div>
-                            );
-                          })}
-                        </div>
-                      </section>
+                                  <motion.a
+                                    variants={{
+                                      hover: {
+                                        letterSpacing: '5px',
+                                      },
+                                    }}
+                                    href={item.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className=" text-neutral-300 font-extralight leading-none tracking-tighter z-10 text-4xl "
+                                  >
+                                    {item.name}
+                                  </motion.a>
+                                </motion.div>
+                              );
+                            })}
+                          </div>
+                          <div class="row-start-3 w-full flex lg:flex-row gap-10 justify-between items-start">
+                            <motion.a
+                              variants={socialLinks}
+                              initial="initial"
+                              animate="animate"
+                              custom={0.3}
+                              class="text-neutral-400 uppercase font-light text-sm tracking-tight underline underline-offset-4"
+                              target="_blank"
+                              href="https://twitter.com/frnguerrero"
+                            >
+                              Twitter
+                            </motion.a>
+                            <motion.a
+                              variants={socialLinks}
+                              initial="initial"
+                              animate="animate"
+                              custom={0.5}
+                              class="text-neutral-400 uppercase font-light text-sm tracking-tight underline underline-offset-4"
+                              target="_blank"
+                              href="https://www.linkedin.com/in/juan-francisco-guerrero-16143849/?locale=en_US"
+                            >
+                              Linkedin
+                            </motion.a>
+                            <motion.a
+                              variants={socialLinks}
+                              initial="initial"
+                              animate="animate"
+                              custom={0.7}
+                              class="text-neutral-400 uppercase font-light text-sm tracking-tight underline underline-offset-4"
+                              target="_blank"
+                              href="https://github.com/efeguerrero"
+                            >
+                              Github
+                            </motion.a>
+                          </div>
+                        </section>
+                      </Container>
                     </motion.div>
                   </Collapsible.Content>
                 </Portal.Root>
