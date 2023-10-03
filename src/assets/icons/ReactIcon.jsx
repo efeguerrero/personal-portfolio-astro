@@ -17,6 +17,8 @@ import { ReactComponent as English } from './skills/english.svg';
 import { ReactComponent as HTML } from './skills/html5.svg';
 import { ReactComponent as CSS } from './skills/css3.svg';
 import { ReactComponent as Framer } from './skills/framer.svg';
+import { ReactComponent as GithubSlim } from './social/githubSlim.svg';
+import { ReactComponent as OpenInNew } from './system/openInNew.svg';
 
 const ReactIcon = ({ className, icon }) => {
   return (
@@ -39,6 +41,8 @@ const ReactIcon = ({ className, icon }) => {
       {icon == 'html' && <HTML />}
       {icon == 'css' && <CSS />}
       {icon == 'framer' && <Framer />}
+      {icon == 'githubSlim' && <GithubSlim />}
+      {icon == 'openInNew' && <OpenInNew />}
     </div>
   );
 };

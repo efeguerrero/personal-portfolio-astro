@@ -1,41 +1,46 @@
-import React from 'react';
-
-//Style Import
-import styles from './work.module.scss';
+//Component Import
+import ReactIcon from '@/assets/icons/ReactIcon';
 
 const Work = ({ project }) => {
-  const { name, img, demoURL, githubURL, technologies, description } = project;
-
   return (
-    <section className={styles.project}>
-      <div className={styles.imgContainer}>
-        <img src={img} alt={name} className={styles.projectImg} />
-      </div>
-      <div className={styles.infoContainer}>
-        <div className={styles.projectMainInfo}>
-          <h2 className={styles.projectTitle}>{name}</h2>
-          <h3 className={styles.projectDescription}>{description}</h3>
-          <div className={styles.projectLinks}>
-            <a href={demoURL} target="_blank" className={styles.demoLink}>
-              demo
-            </a>
-            {githubURL === 'none' ? (
-              <></>
-            ) : (
-              <a href={githubURL} target="_blank" className={styles.githubLink}>
-                code
-              </a>
-            )}
-          </div>
-        </div>
-        <div className={styles.projectTechnologies}>
-          <h2 className={styles.technologiesTitle}>tools used</h2>
-          {technologies.map((tech) => (
-            <h2 className={styles.tech}>{tech}</h2>
+    <>
+      <div className="shrink-0">
+        <h2 className="text-[54px] leading-none font-bold text-neutral-300 capitalize">
+          {project.name}
+        </h2>
+
+        <p className="max-w-[50ch] text-base my-8  text-neutral-400">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-4  items-center ">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-neutral-300 capitalize text-xs rounded-full px-3 py-1 bg-neutral-950/70"
+            >
+              {tech}
+            </span>
           ))}
         </div>
+        <div className="flex gap-6 mt-8  items-center">
+          <a href={project.demoURL} className="text-neutral-400">
+            <ReactIcon icon="openInNew" className="w-6 h-6" />
+          </a>
+          {project.githubURL !== 'none' ? (
+            <a href={project.githubURL} className="text-neutral-400">
+              <ReactIcon icon="github" className="w-6 h-6" />
+            </a>
+          ) : null}
+        </div>
       </div>
-    </section>
+      <div className="my-8 ">
+        <img
+          className="grayscale max-w-[40rem] w-full aspect-square  "
+          src={project.img}
+          alt="Project Image"
+        />
+      </div>
+    </>
   );
 };
 

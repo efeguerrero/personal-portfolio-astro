@@ -1,0 +1,32 @@
+---
+//Component Imports
+import Container from '@/components/common/Container.astro';
+import Work from '@/components/work/Work.jsx';
+
+//Data Import
+import projects from '@/utils/projects';
+---
+
+<Container>
+  <section
+    id="about"
+    class="flex flex-col items-center justify-center py-32 sm:py-32 gap-8"
+  >
+    <h2
+      class="font-normal text-3xl w-min text-right text-neutral-200 leading-none tracking-tighter mr-auto"
+    >
+      recent work
+    </h2>
+    <div class="flex flex-col w-full items-center gap-16 lg:px-24">
+      {
+        projects.map((project) => {
+          return (
+            <div class="flex items-center w-full gap-8">
+              <Work client:idle project={project} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+</Container>

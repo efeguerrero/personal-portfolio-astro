@@ -1,8 +1,8 @@
 //Images Import
-import toDoApp from '../assets/images/projects/toDoApp.png';
-import musicProducer from '../assets/images/projects/musicProducer.png';
-import stefanos from '../assets/images/projects/stefanos.png';
-import tintsAndShades from '../assets/images/projects/tintsandshades.png';
+import toDoApp from '../assets/images/projects/trial.png';
+import musicProducer from '../assets/images/projects/trial.png';
+import stefanos from '../assets/images/projects/trial.png';
+import tintsAndShades from '../assets/images/projects/trial.png';
 
 const projects = [
   {
@@ -10,7 +10,8 @@ const projects = [
     name: 'do it',
     img: toDoApp,
     demoURL: 'https://reactjs-project-to-do-list.netlify.app',
-    githubURL: 'none',
+    githubURL:
+      'https://github.com/efeguerrero/Coder-House--React-Course--Final-Project--ecommerce-site.git',
     technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'PWA'],
     description:
       'Fully responsive to-do app built with react. Developed as a Progressive Web App to give mobile users a native experience. ',

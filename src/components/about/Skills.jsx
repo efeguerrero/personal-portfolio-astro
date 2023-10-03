@@ -22,6 +22,7 @@ const Skills = ({ skillCategory, title }) => {
             return (
               <div
                 id={index}
+                key={index}
                 className="flex flex-col justify-between items-center relative "
               >
                 <Tooltip.Provider delayDuration={0}>
