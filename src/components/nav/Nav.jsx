@@ -171,7 +171,7 @@ const Nav = () => {
                                       },
                                     }}
                                     href={item.href}
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={() => handleMenuClick()}
                                     className=" text-neutral-300 font-extralight leading-none tracking-tighter z-10 text-4xl "
                                   >
                                     {item.name}

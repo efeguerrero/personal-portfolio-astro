@@ -5,7 +5,7 @@ const Work = ({ project }) => {
   return (
     <>
       <div className="shrink-0">
-        <h2 className="lg:text-[54px] text-3xl lg:text-4xl  leading-none font-semibold lg:text-neutral-300 text-neutral-400 capitalize">
+        <h2 className="lg:text-[54px] text-3xl lg:text-4xl  leading-none font-normal lg:font-semibold lg:text-neutral-300 text-neutral-400 capitalize">
           {project.name}
         </h2>
 
