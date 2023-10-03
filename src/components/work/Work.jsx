@@ -9,10 +9,10 @@ const Work = ({ project }) => {
           {project.name}
         </h2>
 
-        <p className="max-w-[50ch] text-base my-8  text-neutral-400 lg:text-neutral-300">
+        <p className="lg:max-w-[40ch] xl:max-w-[50ch] text-base my-8  text-neutral-400 ">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2 lg:gap-3 max-w-[80%] items-center ">
+        <div className="flex flex-wrap gap-2 lg:gap-2 max-w-[80%] items-center ">
           {project.technologies.map((tech, index) => (
             <span
               key={index}
@@ -43,7 +43,7 @@ const Work = ({ project }) => {
       </div>
       <div className="my-8 ">
         <img
-          className="grayscale max-w-[40rem] w-full aspect-square  "
+          className="grayscale md:max-w-[35rem] lg:max-w-[40rem] w-full aspect-square  "
           src={project.img}
           alt="Project Image"
         />

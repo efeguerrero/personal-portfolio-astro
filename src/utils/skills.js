@@ -1,54 +1,46 @@
 const skills = [
   {
-    name: 'HTML',
-    icon: 'html',
-    category: 'frontEnd',
-  },
-  {
-    name: 'CSS',
-    icon: 'css',
-    category: 'frontEnd',
-  },
-  {
     name: 'JavaScript',
     icon: 'javascript',
-    category: 'frontEnd',
+    category: 'stack',
   },
   {
     name: 'Typescript',
     icon: 'typescript',
-    category: 'frontEnd',
+    category: 'stack',
   },
   {
     name: 'react',
     icon: 'react',
-    category: 'frontEnd',
-  },
-  {
-    name: 'astro',
-    icon: 'astro',
-    category: 'frontEnd',
+    category: 'stack',
   },
   {
     name: 'nextJS',
     icon: 'next',
-    category: 'frontEnd',
+    category: 'stack',
   },
+  {
+    name: 'astro',
+    icon: 'astro',
+    category: 'stack',
+  },
+
   {
     name: 'tailwind',
     icon: 'tailwind',
-    category: 'frontEnd',
-  },
-  {
-    name: 'SASS',
-    icon: 'sass',
-    category: 'frontEnd',
+    category: 'stack',
   },
   {
     name: 'framer Motion',
     icon: 'framer',
     category: 'other',
   },
+  {
+    name: 'SASS',
+    icon: 'sass',
+    category: 'other',
+  },
+
   {
     name: 'firebase',
     icon: 'firebase',

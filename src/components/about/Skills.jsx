@@ -13,7 +13,7 @@ import ReactIcon from '@/assets/icons/ReactIcon.jsx';
 const Skills = ({ skillCategory, title }) => {
   return (
     <div className="">
-      <h2 className="font-normal mb-6 text-2xl text-neutral-300 leading-none tracking-tighter">
+      <h2 className="font-normal mb-6 text-2xl text-neutral-400 leading-none tracking-tighter">
         {title}
       </h2>
       <div className="flex items-center justify-start flex-wrap gap-6">
@@ -31,7 +31,7 @@ const Skills = ({ skillCategory, title }) => {
                       <button>
                         <ReactIcon
                           icon={skill.icon}
-                          className="w-10 aspect-square text-neutral-400"
+                          className="w-9 aspect-square text-neutral-400"
                         />
                       </button>
                     </Tooltip.Trigger>
