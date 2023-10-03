@@ -4,16 +4,13 @@ import Layout from '../layouts/Layout.astro';
 // import Header from '../components/header/Header';
 import About from '@/components/about/About.astro';
 import WorkContainer from '../components/work/WorkContainer.astro';
-import Contact from '../components/contact/Contact';
-
-import ScrollBtn from '../components/scrollBtn/ScrollBtn';
+import Contact from '../components/contact/Contact.astro';
 import Header from '@/components/Header.astro';
 ---
 
 <Layout title="Francisco Guerrero | Frontend Developer">
-  <!-- <Header client:visible /> -->
   <Header />
   <About />
   <WorkContainer />
-  <!-- <Contact client:visible />-->
+  <Contact />
 </Layout>
