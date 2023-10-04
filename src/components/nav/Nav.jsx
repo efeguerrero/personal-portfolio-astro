@@ -5,12 +5,7 @@ import * as Collapsible from '@radix-ui/react-collapsible';
 import * as Portal from '@radix-ui/react-portal';
 
 //Framer Motion Imports
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 //Component Imports
 import Container from '@/components/common/Container.jsx';
@@ -91,10 +86,12 @@ const Nav = () => {
     <section className="absolute pb-8 pt-10 lg:pt-14 inset-x-0 top-0 lg:z-20">
       <Container>
         <nav className=" w-full flex items-center justify-between bg-transparent">
-          <a href="/" className="cursor-pointer z-20 mt-[2px]">
-            <h2 className="text-2xl leading-none tracking-widest font-bold uppercase text-neutral-400 hover:text-neutral-200 transition-colors duration-200 ease-in-out">
-              fran g.
-            </h2>
+          <a
+            href="/"
+            className="cursor-pointer z-20 mt-[2px] text-2xl font-normal tracking-widest  text-neutral-400"
+          >
+            {/* <ReactIcon icon="logo" className="w-10 h-10 text-neutral-600" /> */}
+            {`{fg}`}
           </a>
 
           <Collapsible.Root open={isMenuOpen} onOpenChange={handleMenuClick}>
