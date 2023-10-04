@@ -1,6 +1,6 @@
 //Images Import
-import toDoApp from '../assets/images/projects/trial.png';
-import musicProducer from '../assets/images/projects/trial.png';
+import toDoApp from '../assets/images/projects/trial2.png';
+import musicProducer from '../assets/images/projects/crece.svg';
 import stefanos from '../assets/images/projects/trial.png';
 import tintsAndShades from '../assets/images/projects/trial.png';
 
