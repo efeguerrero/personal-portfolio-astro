@@ -88,7 +88,7 @@ const Nav = () => {
         <nav className=" w-full flex items-center justify-between bg-transparent">
           <a
             href="/"
-            className="cursor-pointer z-20 mt-[2px] text-2xl font-normal tracking-widest  text-neutral-400"
+            className="cursor-pointer z-20 mt-[2px] text-2xl hover:text-neutral-300 transition-all font-normal tracking-widest  text-neutral-400"
           >
             {/* <ReactIcon icon="logo" className="w-10 h-10 text-neutral-600" /> */}
             {`{fg}`}
