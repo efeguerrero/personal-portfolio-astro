@@ -4,64 +4,54 @@ import Container from '@/components/common/Container.astro';
 ---
 
 <Container>
-  <header
-    class="relative h-[100svh] grid grid-rows-[200px_1fr_200px] items-center"
-  >
+  <header class="relative h-[100svh] flex items-center">
     <div
       class="@container w-full gap-8 flex flex-col lg:flex-row lg:items-end row-start-2"
     >
       <div class="flex flex-col justify-center w-full items-start">
         <h2
-          class="text-neutral-200 font-normal w-max leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,4.2rem)] @[77rem]:text-[5.5rem]"
+          class="text-neutral-50 font-normal w-max leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,3rem)]"
         >
           Hi, I'm Francisco.
         </h2>
-        <h2
-          class="text-neutral-200 font-normal leading-none tracking-tighter @[1rem]:[font-size:clamp(1rem_,14cqw_,4.2rem)] @[77rem]:text-[5.5rem]"
-        >
-          Web Developer.
-        </h2>
       </div>
       <h3
-        class="text-neutral-400 lg:text-neutral-300 font-light tracking-tighter leading-normal pb-[8px] text-right w-full @[1rem]:[font-size:clamp(0.96rem_,4cqw_,1.1rem)]"
+        class="text-neutral-400 tracking-tighter leading-normal pb-[8px] w-full @[1rem]:[font-size:clamp(1.1rem_,4cqw_,1.5rem)]"
       >
         Buenos Aires based engineer & developer. <br />
         Specialized in React stack and Astro framework.
       </h3>
-    </div>
-    <div
-      class="@container flex pb-10 justify-between w-full items-end row-start-3 self-end"
-    >
-      <div class="flex flex-col lg:flex-row gap-4 justify-center items-start">
+      <div
+        class="flex mt-6 gap-6 flex-wrap justify-start lg:justify-center items-center"
+      >
         <a
-          class="text-neutral-300 uppercase font-light text-xs tracking-tight underline underline-offset-4 lg:hover:underline-offset-8 transition-all ease-in-out"
+          class="text-neutral-500 lowercase [text-decoration-thickness:1px] underline underline-offset-[6px] lg:hover:underline-offset-8 transition-all ease-in-out"
           target="_blank"
           href="https://twitter.com/frnguerrero"
         >
           Twitter
         </a>
         <a
-          class="text-neutral-300 uppercase font-light text-xs tracking-tight underline underline-offset-4 lg:hover:underline-offset-8 transition-all ease-in-out"
+          class="text-neutral-500 lowercase [text-decoration-thickness:1px] underline underline-offset-[6px] lg:hover:underline-offset-8 transition-all ease-in-out"
           target="_blank"
           href="https://www.linkedin.com/in/juan-francisco-guerrero-16143849/?locale=en_US"
         >
           Linkedin
         </a>
         <a
-          class="text-neutral-300 uppercase font-light text-xs tracking-tight underline underline-offset-4 lg:hover:underline-offset-8 transition-all ease-in-out"
+          class="text-neutral-500 lowercase underline [text-decoration-thickness:1px] underline-offset-[6px] lg:hover:underline-offset-8 transition-all ease-in-out"
           target="_blank"
           href="https://github.com/efeguerrero"
         >
           Github
         </a>
-      </div>
-      <div
-        class="flex rotate-90 origin-top-right translate-y-[100%] justify-center items-center gap-1 botder-[1px]"
-      >
-        <h4 class="uppercase tracking-[4px] text-xs text-neutral-300">
-          scroll
-        </h4>
-        <div class="h-[1px] bg-neutral-300 @[1rem]:w-[10cqh]"></div>
+        <a
+          class="text-neutral-500 lowercase underline [text-decoration-thickness:1px] underline-offset-[6px] lg:hover:underline-offset-8 transition-all ease-in-out"
+          target="_blank"
+          href="https://github.com/efeguerrero"
+        >
+          email
+        </a>
       </div>
     </div>
   </header>
