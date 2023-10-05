@@ -5,7 +5,7 @@ const Work = ({ project }) => {
   return (
     <>
       <div class="flex w-full items-center mb-4 justify-between">
-        <h2 className="text-lg font-semibold  text-neutral-100 capitalize">
+        <h2 className="text-lg font-semibold  text-neutral-300 capitalize">
           {project.name}
         </h2>
         <div className="flex items-center gap-6 justify-between">
@@ -27,7 +27,7 @@ const Work = ({ project }) => {
           ) : null}
         </div>
       </div>
-      <p className="text-neutral-400 text-sm my-4 ">{project.description}</p>
+      <p className="text-neutral-400 text-base my-4 ">{project.description}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-2 my-4 items-center ">
         {project.technologies.map((tech, index) => (
           <span
