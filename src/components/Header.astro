@@ -51,7 +51,7 @@ import ReactIcon from '@/assets/icons/ReactIcon';
           aria-label="Link to send me an email"
           class="text-neutral-400 lg:hover:text-neutral-200 transition-all ease-in-out"
           target="_blank"
-          href="mailto:fr?ncisco.guerrero.d??vATgmailDOTcom"
+          href="mailto:f%72%61nc%69sco.guerrer%6F.d%65v%40gmail.com"
         >
           <ReactIcon icon="email" className="w-6 h-6" />
         </a>
@@ -59,20 +59,3 @@ import ReactIcon from '@/assets/icons/ReactIcon';
     </div>
   </header>
 </Container>
-
-<script>
-  const emailLink = document.getElementById('email-link');
-
-  const decode = (str: string) =>
-    str
-      .replace('AT', '@')
-      .replace('?', 'a')
-      .replace('DOT', '.')
-      .replace('??', 'e');
-
-  emailLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.href = `mailto:${decode(emailLink.getAttribute('href'))}`;
-    console.log(decode(emailLink.getAttribute('href')));
-  });
-</script>
