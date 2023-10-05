@@ -4,29 +4,15 @@ import ReactIcon from '@/assets/icons/ReactIcon';
 const Work = ({ project }) => {
   return (
     <>
-      <div className="shrink-0">
-        <h2 className="lg:text-[54px] text-2xl lg:text-4xl  leading-none font-semibold lg:text-neutral-300 text-neutral-400 capitalize">
+      <div class="flex w-full items-center mb-4 justify-between">
+        <h2 className="text-lg font-semibold  text-neutral-100 capitalize">
           {project.name}
         </h2>
-
-        <p className="lg:max-w-[40ch] xl:max-w-[50ch] text-base my-8  text-neutral-400 ">
-          {project.description}
-        </p>
-        <div className="flex flex-wrap gap-2 lg:gap-2 max-w-[80%] items-center ">
-          {project.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="text-neutral-300 capitalize text-sm rounded-full px-3 py-1 bg-neutral-950/70"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-        <div className="flex gap-6 mt-8 items-center">
+        <div className="flex items-center gap-6 justify-between">
           <a
             target="_blank"
             href={project.demoURL}
-            className="text-neutral-400"
+            className="text-neutral-300"
           >
             <ReactIcon icon="openInNew" className="w-7 h-7" />
           </a>
@@ -34,19 +20,23 @@ const Work = ({ project }) => {
             <a
               target="_blank"
               href={project.githubURL}
-              className="text-neutral-400"
+              className="text-neutral-300"
             >
               <ReactIcon icon="github" className="w-6 h-6" />
             </a>
           ) : null}
         </div>
       </div>
-      <div className="my-8 ">
-        <img
-          className="grayscale md:max-w-[35rem] lg:max-w-[40rem] w-full aspect-square  "
-          src={project.img}
-          alt="Project Image"
-        />
+      <p className="text-neutral-400 text-sm my-4 ">{project.description}</p>
+      <div className="flex flex-wrap gap-x-3 gap-y-2 my-4 items-center ">
+        {project.technologies.map((tech, index) => (
+          <span
+            key={index}
+            className="text-neutral-300 capitalize text-xs rounded-full px-4 py-1 bg-neutral-800/90 lg:bg-neutral-900/80"
+          >
+            {tech}
+          </span>
+        ))}
       </div>
     </>
   );

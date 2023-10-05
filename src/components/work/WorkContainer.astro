@@ -10,23 +10,29 @@ import projects from '@/utils/projects';
 <Container>
   <section
     id="projects"
-    class="flex flex-col items-center justify-center py-32 sm:py-32 gap-8"
+    class="flex flex-col md:flex-row md:items-start items-center justify-center pb-32 gap-16"
   >
     <h2
-      class="font-normal mb-6 text-3xl lg:w-min text-right text-neutral-200 leading-none tracking-tighter mr-auto"
+      class="font-normal text-3xl mb-6 md:mb-0 w-min text-right text-neutral-200 leading-none tracking-tighter mr-auto"
     >
       recent work
     </h2>
-    <div class="flex flex-col w-full items-center gap-16 lg:px-24">
-      {
-        projects.map((project) => {
-          return (
-            <div class="flex lg:flex-row flex-col items-center w-full gap-8 max-w-[590px]  lg:max-w-none">
-              <Work client:idle project={project} />
-            </div>
-          );
-        })
-      }
+    <div>
+      <h3 class="text-neutral-400 mb-32">
+        Here you will find some of my most recent freelance work and side
+        projects.
+      </h3>
+      <div class="flex flex-col gap-16 items-start justify-center">
+        {
+          projects.map((project) => {
+            return (
+              <div class="flex flex-col items-start w-5/5">
+                <Work client:idle project={project} />
+              </div>
+            );
+          })
+        }
+      </div>
     </div>
   </section>
 </Container>
