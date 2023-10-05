@@ -10,6 +10,7 @@ const Work = ({ project }) => {
         </h2>
         <div className="flex items-center gap-6 justify-between">
           <a
+            aria-label="Link to demo site"
             target="_blank"
             href={project.demoURL}
             className="text-neutral-300"
@@ -18,6 +19,7 @@ const Work = ({ project }) => {
           </a>
           {project.githubURL !== 'none' ? (
             <a
+              aria-label="Link to github repo"
               target="_blank"
               href={project.githubURL}
               className="text-neutral-300"

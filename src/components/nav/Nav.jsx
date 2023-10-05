@@ -15,6 +15,7 @@ const Nav = () => {
             {navigation.map((item, index) => {
               return (
                 <a
+                  aria-label={`Link to ${item.name} section`}
                   key={index}
                   className="text-neutral-200 font-light lowercase  text-lg  cursor-pointer hover:text-neutral-50 transition-colors duration-200 ease-in-out"
                   href={item.href}
