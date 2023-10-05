@@ -10,14 +10,14 @@ import '@/styles/global.css';
 
 //Component Import
 import Nav from '@/components/nav/Nav';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/footer/Footer.astro';
 
 //Image imports
 import background from '@/assets/shapes/linesBackground.svg';
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -69,6 +69,7 @@ import background from '@/assets/shapes/linesBackground.svg';
     >
       <Nav client:visible />
       <slot />
+      <Footer />
     </section>
   </body>
 </html>

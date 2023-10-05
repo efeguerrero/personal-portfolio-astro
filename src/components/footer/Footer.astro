@@ -1,0 +1,19 @@
+---
+//Component Imports
+import Container from '@/components/common/Container.astro';
+---
+
+<Container>
+  <footer class="grid place-items-center py-8">
+    <h2 class="text-neutral-400 text-sm">
+      Francisco Guerrero | <span id="yearHolder"></span>
+    </h2>
+  </footer>
+</Container>
+
+<script>
+  const yearHolder = document.getElementById('yearHolder');
+  const year = new Date().getFullYear().toString();
+
+  yearHolder.innerHTML = year;
+</script>
