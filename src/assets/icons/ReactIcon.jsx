@@ -20,6 +20,7 @@ import { ReactComponent as Framer } from './skills/framer.svg';
 import { ReactComponent as GithubSlim } from './social/githubSlim.svg';
 import { ReactComponent as OpenInNew } from './system/openInNew.svg';
 import { ReactComponent as Logo } from '@/assets/icons/logo.svg';
+import { ReactComponent as Pointer } from './system/pointer.svg';
 
 const ReactIcon = ({ className, icon }) => {
   return (
@@ -45,6 +46,7 @@ const ReactIcon = ({ className, icon }) => {
       {icon == 'githubSlim' && <GithubSlim />}
       {icon == 'openInNew' && <OpenInNew />}
       {icon == 'logo' && <Logo />}
+      {icon == 'pointer' && <Pointer />}
     </div>
   );
 };
