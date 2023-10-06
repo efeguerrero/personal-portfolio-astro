@@ -16,17 +16,12 @@ const SkillsContainer = () => {
         <div className="grid mt-4 grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-2">
           {skills.stack.map((skill, index) => {
             return (
-              <div className="flex gap-[0.35rem] items-center">
+              <div key={index} className="flex gap-[0.35rem] items-center">
                 <ReactIcon
                   icon="pointer"
                   className="w-4 h-4 text-neutral-400"
                 />
-                <p
-                  key={index}
-                  className="text-neutral-400 text-base capitalize"
-                >
-                  {skill}
-                </p>
+                <p className="text-neutral-400 text-base capitalize">{skill}</p>
               </div>
             );
           })}

@@ -4,7 +4,7 @@ import ReactIcon from '@/assets/icons/ReactIcon';
 const Work = ({ project }) => {
   return (
     <>
-      <div class="flex w-full items-center mb-4 justify-between">
+      <div className="flex w-full items-center mb-4 justify-between">
         <h2 className="text-lg font-semibold  text-neutral-300 capitalize">
           {project.name}
         </h2>
@@ -22,9 +22,9 @@ const Work = ({ project }) => {
               aria-label="Link to github repo"
               target="_blank"
               href={project.githubURL}
-              className="text-neutral-300"
+              className="text-neutral-300 lg:hover:text-neutral-100"
             >
-              <ReactIcon icon="github" className="w-6 h-6" />
+              <ReactIcon icon="github" className="w-6 h-6 " />
             </a>
           ) : null}
         </div>

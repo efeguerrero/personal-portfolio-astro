@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        rad: "url('./src/assets/shapes/linesBackground.svg')",
+      },
       screens: {
         '3xl': '1800px',
       },

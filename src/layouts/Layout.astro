@@ -11,40 +11,52 @@ import '@/styles/global.css';
 //Component Import
 import Nav from '@/components/nav/Nav';
 import Footer from '@/components/footer/Footer.astro';
-
-//Image imports
-import background from '@/assets/shapes/linesBackground.svg';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:description" content="Hi,I'm Francisco.Web developer." />
-    <meta
-      content="https://portfolio-fg.netlify.app/android192.png"
-      property="og:image"
-    />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/logo192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/logo512.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta charset="UTF-8" />
+    <meta property="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://franguerrero.dev" />
+    <link rel="icon" type="image/svg" sizes="1024x1024" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- Meta Tags -->
 
+    <!-- Meta Tags -->
     <meta
       name="description"
-      content="Personal portfolio website for Web Developer Francisco Guerrero"
+      content="Buenos Aires based engineer & developer. Specialized in React stack and Astro framework."
     />
     <meta
       name="keywords"
-      content="frontend,react,astro,javascript,developer,website,development,html,coding,front,end,css,webpage"
+      content="frontend,react,astro,javascript,developer,website,development,html,coding,front,end,css,webpage,nextjs,tailwind,framer,motion"
     />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Buenos Aires based engineer & developer. Specialized in React stack and Astro framework."
+    />
+    <meta property="og:site_name" content="Francisco Guerrero" />
+    <meta property="og:title" content="Francisco Guerrero" />
+    <meta property="og:image" content="https://franguerrero.dev/ogImage.png" />
+    <meta property="og:url" content="https://franguerrero.dev" />
+
+    <!-- Twitter -->
+    <meta name="twitter:image" content="https://franguerrero.dev/ogImage.png" />
+    <meta name="twitter:image:type" content="png" />
+    <meta name="twitter:title" content="Francisco Guerrero" />
+    <meta property="twitter:url" content="https://franguerrero.dev" />
+    <meta name="twitter:creator" content="@frnguerrero" />
+    <meta
+      name="twitter:description"
+      content="Buenos Aires based engineer & developer. Specialized in React stack and Astro framework."
+    />
+
+    <!-- Google tags -->
     <meta name="author" content="Francisco Guerrero" />
     <meta name="revisit-after" content="35 Days" />
     <meta name="GOOGLEBOT" content="index,follow,all" />
@@ -65,7 +77,7 @@ import background from '@/assets/shapes/linesBackground.svg';
   </head>
   <body class="bg-neutral-950 font-inter">
     <section
-      class="bg-[url('/linesBackground.svg')] bg-no-repeat bg-fixed bg-[length:auto_100lvh] md:bg-cover lg:bg-bottom h-full w-full"
+      class="bg-rad bg-no-repeat bg-fixed bg-[length:auto_100lvh] md:bg-cover lg:bg-bottom h-full w-full"
     >
       <Nav client:visible />
       <slot />
