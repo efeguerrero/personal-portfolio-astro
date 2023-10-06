@@ -42,11 +42,17 @@ import Footer from '@/components/footer/Footer.astro';
     />
     <meta property="og:site_name" content="Francisco Guerrero" />
     <meta property="og:title" content="Francisco Guerrero" />
-    <meta property="og:image" content="https://franguerrero.dev/ogImage.png" />
+    <meta
+      property="og:image"
+      content="https://franguerrero.dev/ogImageNew.png"
+    />
     <meta property="og:url" content="https://franguerrero.dev" />
 
     <!-- Twitter -->
-    <meta name="twitter:image" content="https://franguerrero.dev/ogImage.png" />
+    <meta
+      name="twitter:image"
+      content="https://franguerrero.dev/ogImageNew.png"
+    />
     <meta name="twitter:image:type" content="png" />
     <meta name="twitter:title" content="Francisco Guerrero" />
     <meta property="twitter:url" content="https://franguerrero.dev" />
@@ -77,7 +83,7 @@ import Footer from '@/components/footer/Footer.astro';
   </head>
   <body class="bg-neutral-950 font-inter">
     <section
-      class="bg-rad bg-no-repeat bg-fixed bg-[length:auto_100lvh] md:bg-cover lg:bg-bottom h-full w-full"
+      class=`bg-[url("/linesBackground.svg")] bg-no-repeat bg-fixed bg-[length:auto_100lvh] md:bg-cover lg:bg-bottom h-full w-full`
     >
       <Nav client:visible />
       <slot />
