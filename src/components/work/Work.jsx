@@ -13,7 +13,7 @@ const Work = ({ project }) => {
             aria-label="Link to demo site"
             target="_blank"
             href={project.demoURL}
-            className="text-neutral-300"
+            className="text-neutral-300 lg:hover:text-neutral-50"
           >
             <ReactIcon icon="openInNew" className="w-7 h-7" />
           </a>
@@ -22,7 +22,7 @@ const Work = ({ project }) => {
               aria-label="Link to github repo"
               target="_blank"
               href={project.githubURL}
-              className="text-neutral-300 lg:hover:text-neutral-100"
+              className="text-neutral-300 lg:hover:text-neutral-50"
             >
               <ReactIcon icon="github" className="w-6 h-6 " />
             </a>
