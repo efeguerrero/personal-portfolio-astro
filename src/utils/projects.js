@@ -1,46 +1,57 @@
 const projects = [
   {
-    id: 1,
-    name: 'do it',
-    demoURL: 'https://reactjs-project-to-do-list.netlify.app',
+    name: 'bolt',
+    demoURL: 'https://bolt-io.netlify.app/',
     githubURL: 'none',
-    technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'PWA'],
+    technologies: ['react', 'typescript', 'mantine UI', 'firebase'],
     description:
-      'Fully responsive to-do app built with react. Developed as a Progressive Web App to give mobile users a native experience. ',
+      'Fully responsive to-do app that allows users to group related tasks together for simple and effective management. Built with user authentication and real time data synchronization between devices. ',
   },
   {
-    id: 2,
-    name: 'Stefanos Deco',
-    demoURL: 'https://stefanosdeco-coderh.netlify.app/',
-    githubURL:
-      'https://github.com/efeguerrero/Coder-House--React-Course--Final-Project--ecommerce-site.git',
-    technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'firebase'],
-    description:
-      'E-commerce website developed for React JS course in Coder House (coderhouse.com). Fully responsive site built with React and using Firebase as back-end for databases, order generation and stock management',
-  },
-  {
-    id: 3,
-    name: 'Santiago Rey',
-    demoURL: 'https://santiago-rey.netlify.app/',
-    githubURL: 'https://github.com/efeguerrero/Productor_Guerrero.git',
+    name: 'stefanos leather',
+    demoURL: 'https://leather-preview.vercel.app/',
+    githubURL: 'https://github.com/efeguerrero/stefanos-leather',
     technologies: [
-      'javascript',
-      'HTML',
-      'CSS/SASS',
-      'Contentful CMS',
-      'Bootstrap',
+      'nextJS',
+      'typescript',
+      'tailwind',
+      'framer motion',
+      'radix',
+      'contentful',
     ],
     description:
-      'Personal site for Argentinean music producer Santiago Rey. Content managment system implemented with Contentful API to give owner content control.',
+      'Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management. ',
   },
   {
-    id: 4,
     name: 'tints & shades',
     demoURL: 'https://shade-your-color.netlify.app',
     githubURL: 'https://github.com/efeguerrero/shade-your-color.git',
-    technologies: ['react', 'javascript', 'HTML', 'CSS'],
+    technologies: ['react', 'javascript'],
     description:
       'Generate tints and shades for any colour to upgrade your palette. Built using Values.js from Noel Delgado.',
+  },
+  {
+    name: 'do it',
+    demoURL: 'https://reactjs-project-to-do-list.netlify.app',
+    githubURL: 'none',
+    technologies: ['react', 'javascript', 'PWA'],
+    description:
+      'Simple to-do app built with react. All data is stored locally on your device and no registration is needed. Developed as a Progressive Web App to give mobile users a more native experience.  ',
+  },
+  {
+    name: 'crece mas',
+    demoURL: 'https://www.crecemas.net/en/',
+    githubURL: 'https://github.com/efeguerrero/crece-web',
+    technologies: ['astro', 'javascript', 'tailwind', 'framer motion', 'radix'],
+    description: 'Website for argentinean digital marketing agency.  ',
+  },
+
+  {
+    name: 'Brasa Agency',
+    demoURL: 'https://brasa.agency/',
+    githubURL: 'none',
+    technologies: ['astro', 'javascript', 'tailwind', 'framer motion', 'radix'],
+    description: 'Website for Argentinean digital marketing agency.',
   },
 ];
 

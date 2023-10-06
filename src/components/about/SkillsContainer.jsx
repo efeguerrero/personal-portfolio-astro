@@ -3,7 +3,7 @@ import ReactIcon from '@/assets/icons/ReactIcon.jsx';
 
 const skills = {
   stack: ['javascript', 'typescript', 'react', 'nextJS', 'astro', 'tailwind'],
-  other: ['framer motion', 'firebase', 'sass'],
+  other: ['radix', 'firebase', 'sass', 'framer motion'],
   languages: ['spanish', 'english'],
 };
 
