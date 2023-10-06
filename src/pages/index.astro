@@ -1,22 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/navbar/Navbar';
-import Header from '../components/header/Header';
-import About from '../components/about/About';
-import WorkContainer from '../components/work/WorkContainer';
-import Contact from '../components/contact/Contact';
-import Footer from '../components/footer/Footer';
-import ScrollBtn from '../components/scrollBtn/ScrollBtn';
+
+// import Header from '../components/header/Header';
+import About from '@/components/about/About.astro';
+import WorkContainer from '../components/work/WorkContainer.astro';
+import Header from '@/components/Header.astro';
 ---
 
-<Layout title="Francisco Guerrero | Frontend Developer">
-  <section class="appContainer">
-    <Navbar client:visible />
-    <Header client:visible />
-    <About />
-    <WorkContainer />
-    <Contact client:visible />
-    <Footer />
-  </section>
-  <ScrollBtn client:idle />
+<Layout title="Francisco Guerrero">
+  <Header />
+  <About />
+  <WorkContainer />
 </Layout>

@@ -1,41 +1,46 @@
-import React from 'react';
-
-//Style Import
-import styles from './work.module.scss';
+//Component Import
+import ReactIcon from '@/assets/icons/ReactIcon';
 
 const Work = ({ project }) => {
-  const { name, img, demoURL, githubURL, technologies, description } = project;
-
   return (
-    <section className={styles.project}>
-      <div className={styles.imgContainer}>
-        <img src={img} alt={name} className={styles.projectImg} />
-      </div>
-      <div className={styles.infoContainer}>
-        <div className={styles.projectMainInfo}>
-          <h2 className={styles.projectTitle}>{name}</h2>
-          <h3 className={styles.projectDescription}>{description}</h3>
-          <div className={styles.projectLinks}>
-            <a href={demoURL} target="_blank" className={styles.demoLink}>
-              demo
+    <>
+      <div className="flex w-full items-center mb-4 justify-between">
+        <h2 className="text-lg font-semibold  text-neutral-300 capitalize">
+          {project.name}
+        </h2>
+        <div className="flex items-center gap-6 justify-between">
+          <a
+            aria-label="Link to demo site"
+            target="_blank"
+            href={project.demoURL}
+            className="text-neutral-300"
+          >
+            <ReactIcon icon="openInNew" className="w-7 h-7" />
+          </a>
+          {project.githubURL !== 'none' ? (
+            <a
+              aria-label="Link to github repo"
+              target="_blank"
+              href={project.githubURL}
+              className="text-neutral-300 lg:hover:text-neutral-100"
+            >
+              <ReactIcon icon="github" className="w-6 h-6 " />
             </a>
-            {githubURL === 'none' ? (
-              <></>
-            ) : (
-              <a href={githubURL} target="_blank" className={styles.githubLink}>
-                code
-              </a>
-            )}
-          </div>
-        </div>
-        <div className={styles.projectTechnologies}>
-          <h2 className={styles.technologiesTitle}>tools used</h2>
-          {technologies.map((tech) => (
-            <h2 className={styles.tech}>{tech}</h2>
-          ))}
+          ) : null}
         </div>
       </div>
-    </section>
+      <p className="text-neutral-400 text-base my-4 ">{project.description}</p>
+      <div className="flex flex-wrap gap-x-3 gap-y-2 my-4 items-center ">
+        {project.technologies.map((tech, index) => (
+          <span
+            key={index}
+            className="text-neutral-300 capitalize text-xs rounded-full px-4 py-1 bg-neutral-800/90 lg:bg-neutral-900/80"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,38 @@
+---
+//Component Imports
+import Container from '@/components/common/Container.astro';
+import Work from '@/components/work/Work.jsx';
+
+//Data Import
+import projects from '@/utils/projects';
+---
+
+<Container>
+  <section
+    id="projects"
+    class="flex flex-col md:flex-row md:items-start items-center justify-center pb-32 lg:gap-16 gap-8"
+  >
+    <h2
+      class="font-normal text-3xl mb-6 md:mb-0 w-min text-right text-neutral-200 leading-none tracking-tighter mr-auto"
+    >
+      recent work
+    </h2>
+    <div>
+      <h3 class="text-neutral-400 mb-16 lg:mb-32">
+        Here you will find some of my most recent freelance work and side
+        projects.
+      </h3>
+      <div class="flex flex-col gap-16 items-start justify-center">
+        {
+          projects.map((project) => {
+            return (
+              <div class="flex flex-col items-start w-5/5">
+                <Work client:idle project={project} />
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Container>

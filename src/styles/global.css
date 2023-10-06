@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .tapColor-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .text-vertical {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+  }
+
+  .bgFade {
+    background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 0) 0%,
+      rgba(10, 10, 10, 0.3) 15%,
+      rgba(10, 10, 10, 0.5) 25%,
+      rgba(10, 10, 10, 0.5) 25%,
+      rgba(10, 10, 10, 0.7) 35%,
+      rgba(10, 10, 10, 0.7) 35%,
+      rgba(10, 10, 10, 0.7) 50%,
+      rgba(10, 10, 10, 0.7) 65%,
+      rgba(10, 10, 10, 0.7) 65%,
+      rgba(10, 10, 10, 0.5) 75%,
+      rgba(10, 10, 10, 0.5) 75%,
+      rgba(10, 10, 10, 0.3) 85%,
+      rgba(10, 10, 10, 0) 100%
+    );
+  }
+}
+/*GLOBAL SETTINGS*/
+
+body {
+  scrollbar-width: thin;
+  scrollbar-base-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  /* display: none; Remove scrollbar for Chrome, Safari, and Opera */
+  width: 22px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 11px;
+  background: #404040;
+  border-radius: 22px;
+  border: 8px solid transparent;
+  background-clip: padding-box;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  width: 11px;
+  background: #525252;
+  border-radius: 22px;
+  border: 8px solid transparent;
+  background-clip: padding-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+::selection {
+  background: #171717;
+}
