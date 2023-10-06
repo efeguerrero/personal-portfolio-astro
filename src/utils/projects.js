@@ -1,17 +1,9 @@
-//Images Import
-import toDoApp from '../assets/images/projects/trial2.png';
-import musicProducer from '../assets/images/projects/crece.svg';
-import stefanos from '../assets/images/projects/trial.png';
-import tintsAndShades from '../assets/images/projects/trial.png';
-
 const projects = [
   {
     id: 1,
     name: 'do it',
-    img: toDoApp,
     demoURL: 'https://reactjs-project-to-do-list.netlify.app',
-    githubURL:
-      'https://github.com/efeguerrero/Coder-House--React-Course--Final-Project--ecommerce-site.git',
+    githubURL: 'none',
     technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'PWA'],
     description:
       'Fully responsive to-do app built with react. Developed as a Progressive Web App to give mobile users a native experience. ',
@@ -19,8 +11,7 @@ const projects = [
   {
     id: 2,
     name: 'Stefanos Deco',
-    img: stefanos,
-    demoURL: 'https://ecomm-coderh.netlify.app/',
+    demoURL: 'https://stefanosdeco-coderh.netlify.app/',
     githubURL:
       'https://github.com/efeguerrero/Coder-House--React-Course--Final-Project--ecommerce-site.git',
     technologies: ['react', 'javascript', 'HTML', 'CSS/SASS', 'firebase'],
@@ -30,7 +21,6 @@ const projects = [
   {
     id: 3,
     name: 'Santiago Rey',
-    img: musicProducer,
     demoURL: 'https://santiago-rey.netlify.app/',
     githubURL: 'https://github.com/efeguerrero/Productor_Guerrero.git',
     technologies: [
@@ -46,7 +36,6 @@ const projects = [
   {
     id: 4,
     name: 'tints & shades',
-    img: tintsAndShades,
     demoURL: 'https://shade-your-color.netlify.app',
     githubURL: 'https://github.com/efeguerrero/shade-your-color.git',
     technologies: ['react', 'javascript', 'HTML', 'CSS'],
