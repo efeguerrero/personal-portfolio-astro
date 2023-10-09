@@ -27,7 +27,7 @@ const projects = [
     demoURL: 'https://www.crecemas.net/en/',
     githubURL: 'https://github.com/efeguerrero/crece-web',
     technologies: ['astro', 'javascript', 'tailwind', 'framer motion', 'radix'],
-    description: 'Website for argentinian digital marketing agency.  ',
+    description: 'Website for Argentinian digital marketing agency.  ',
   },
   {
     name: 'tints & shades',
@@ -50,7 +50,7 @@ const projects = [
     demoURL: 'https://brasa.agency/',
     githubURL: 'none',
     technologies: ['astro', 'javascript', 'tailwind', 'framer motion', 'radix'],
-    description: 'Website for argentinian digital marketing agency.',
+    description: 'Website for Argentinian digital marketing agency.',
   },
 ];
 
