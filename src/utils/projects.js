@@ -5,7 +5,7 @@ const projects = [
     githubURL: 'none',
     technologies: ['react', 'typescript', 'mantine UI', 'firebase'],
     description:
-      'Fully responsive to-do app that allows users to group related tasks together for simple and effective management. Built with user authentication and real time data synchronization between devices. ',
+      'Fully responsive to-do app that allows users to group related tasks together for simple and effective management. Built with user authentication and real time data synchronization between devices. If you want to demo the app use our test user (testboltapp@gmail.com | bolt!Test1 ) ',
   },
   {
     name: 'stefanos leather',
