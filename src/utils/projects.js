@@ -5,7 +5,7 @@ const projects = [
     githubURL: 'none',
     technologies: ['react', 'typescript', 'mantine UI', 'firebase'],
     description:
-      'Fully responsive productivity app that allows users to group related tasks together for simple and effective management. Built with user authentication and real time data synchronization between devices. If you want to demo the app before registering you can log-in as a demo user from the sign in page.',
+      'Simple and effective task management app. Built with user authentication and real time data synchronization between devices. If you want to demo the app before registering you can log-in as a demo user from the sign in page.',
   },
   {
     name: 'stefanos leather',
