@@ -9,7 +9,7 @@ const projects = [
   },
   {
     name: 'stefanos leather',
-    demoURL: 'https://leather-preview.vercel.app/',
+    demoURL: 'https://www.stefanosleather.com/',
     githubURL: 'https://github.com/efeguerrero/stefanos-leather',
     technologies: [
       'nextJS',
