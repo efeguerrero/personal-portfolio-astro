@@ -23,6 +23,15 @@ const projects = [
       'Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management. ',
   },
   {
+    name: 'jobseek',
+    demoURL:
+      'https://expo.dev/accounts/franguerrero/projects/jobseek/builds/fdc6c605-2acb-4ebb-970b-dcf735494cc8',
+    githubURL: 'https://github.com/efeguerrero/job-app',
+    technologies: ['React Native', 'Expo', 'Zustand'],
+    description:
+      'Mobile job searching application developed with React Native and Zustand. Currently only available on Android.',
+  },
+  {
     name: 'crece mas',
     demoURL: 'https://www.crecemas.net/en/',
     githubURL: 'https://github.com/efeguerrero/crece-web',
