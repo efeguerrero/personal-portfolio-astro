@@ -25,11 +25,11 @@ const projects = [
   {
     name: 'jobseek',
     demoURL:
-      'https://expo.dev/accounts/franguerrero/projects/jobseek/builds/fdc6c605-2acb-4ebb-970b-dcf735494cc8',
+      'https://expo.dev/accounts/franguerrero/projects/jobseek/builds/6778108f-df3b-47ed-89ef-f003ec8413a8',
     githubURL: 'https://github.com/efeguerrero/job-app',
     technologies: ['React Native', 'Expo', 'Zustand'],
     description:
-      'Mobile job searching application developed with React Native and Zustand. Currently only available on Android via APK install.',
+      'Mobile job searching application developed with React Native. Currently only available on Android via APK install.',
   },
   {
     name: 'crece mas',
