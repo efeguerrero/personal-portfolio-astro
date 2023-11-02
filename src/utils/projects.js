@@ -29,7 +29,7 @@ const projects = [
     githubURL: 'https://github.com/efeguerrero/job-app',
     technologies: ['React Native', 'Expo', 'Zustand'],
     description:
-      'Mobile job searching application developed with React Native and Zustand. Currently only available on Android.',
+      'Mobile job searching application developed with React Native and Zustand. Currently only available on Android via APK install.',
   },
   {
     name: 'crece mas',
