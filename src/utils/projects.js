@@ -41,7 +41,7 @@ const projects = [
   {
     name: 'tints & shades',
     demoURL: 'https://shade-your-color.netlify.app',
-    githubURL: 'https://github.com/efeguerrero/shade-your-color.git',
+    githubURL: 'none',
     technologies: ['react', 'javascript'],
     description:
       'Generate tints and shades for any colour to upgrade your palette. Built as part of a React Course using Values.js from Noel Delgado.',
@@ -49,7 +49,7 @@ const projects = [
   {
     name: 'do it',
     demoURL: 'https://reactjs-project-to-do-list.netlify.app',
-    githubURL: 'https://github.com/efeguerrero/to-do-app',
+    githubURL: 'none',
     technologies: ['react', 'javascript', 'PWA'],
     description:
       'Simple to-do app built as part of a React Course. All data is stored locally on your device and no registration is needed. Developed as a Progressive Web App to give mobile users a more native experience.  ',
