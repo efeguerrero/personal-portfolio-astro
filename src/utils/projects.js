@@ -23,6 +23,20 @@ const projects = [
       'Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management. ',
   },
   {
+    name: 'crece mas',
+    demoURL: 'https://www.crecemas.net/en/',
+    githubURL: 'https://github.com/efeguerrero/crece-web',
+    technologies: [
+      'astro',
+      'javascript',
+      'tailwind',
+      'framer motion',
+      'radix',
+      'contentful',
+    ],
+    description: 'Website and Blog for Argentinian digital marketing agency.  ',
+  },
+  {
     name: 'jobseek',
     demoURL:
       'https://expo.dev/accounts/franguerrero/projects/jobseek/builds/6778108f-df3b-47ed-89ef-f003ec8413a8',
@@ -30,13 +44,6 @@ const projects = [
     technologies: ['React Native', 'Expo', 'Zustand'],
     description:
       'Mobile job searching application developed with React Native. Currently only available on Android via APK install.',
-  },
-  {
-    name: 'crece mas',
-    demoURL: 'https://www.crecemas.net/en/',
-    githubURL: 'https://github.com/efeguerrero/crece-web',
-    technologies: ['astro', 'javascript', 'tailwind', 'framer motion', 'radix'],
-    description: 'Website for Argentinian digital marketing agency.  ',
   },
   {
     name: 'tints & shades',
