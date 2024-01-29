@@ -5,7 +5,7 @@ const projects = [
     githubURL: 'none',
     technologies: ['react', 'typescript', 'mantine UI', 'firebase'],
     description:
-      'Simple and effective task management app. Built with user authentication and real time data synchronization between devices. If you want to demo the app before registering you can log-in as a demo user from the sign in page.',
+      'Simple and effective task management app with real time data synchronization between devices.',
   },
   {
     name: 'stefanos leather',
@@ -20,7 +20,7 @@ const projects = [
       'contentful',
     ],
     description:
-      'Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management. ',
+      'Product catalogue website built for Stefanos Leather. Built with NextJS as a static site and Contentful CMS for catalogue management. ',
   },
   {
     name: 'crece mas',
